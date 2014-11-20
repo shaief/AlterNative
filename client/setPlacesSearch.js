@@ -1,12 +1,24 @@
 setAutoComplete = function (){
-    var from = document.getElementsByClassName('from-location')[0];
-    var to = document.getElementsByClassName('to-location')[0];
-    var options = {
+    setLocation ("from", 'from-location');
+    setLocation ("to", 'to-location');   
+}
+
+setLocation = function (key, className) {
+	var input = document.getElementsByClassName(className)[0];
+	var options = {
       componentRestrictions: {country: 'il'},
       types: []
     };
-    new google.maps.places.Autocomplete(from, options);
-    new google.maps.places.Autocomplete(to, options);
+    var autoComplete = new google.maps.places.Autocomplete(input, options);
+	google.maps.event.addListener(autoComplete, 'place_changed', function () {
+        var place = autoComplete.getPlace();
+        var location = {
+        	name: place.name,	
+        	latitude: place.geometry.location.lat(),
+        	longtitude: place.geometry.location.lng()
+        } 
+        Session.set(key, location);
+    });
 }
 
 setDistanceMatric = function () {
@@ -45,6 +57,12 @@ setDistanceByType = function (type) {
 	  	distances[type] = {
 	  		duration: element.duration.value / 60,
 	  		distance: element.distance.value / 1000
+	  	}
+	  	if(type == google.maps.TravelMode.WALKING) {
+	  		distances[google.maps.TravelMode.BICYCLING] = {
+		  		duration: element.duration.value / 60 / 4,
+		  		distance: element.distance.value / 1000
+		  	}	
 	  	}
 	  	Session.set('distances', distances);
 	}
