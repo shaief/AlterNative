@@ -1,0 +1,15 @@
+[
+  {
+    "email": "email0@example.com",
+    "username": "demo",
+    "password": "pass",
+    "bicycles": true
+  },
+  {
+    "email": "email1@example.com",
+    "username": "demonstration"
+    "password": "pass",
+    "bicycles": false
+  }
+}
+]

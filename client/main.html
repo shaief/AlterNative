@@ -1,0 +1,57 @@
+<head>
+    <title>KnowGo</title>
+</head>
+<body>
+<div class="container">
+    <!--<header class="navbar navbar-default" role="navigation">-->
+    <!--<div class="navbar-header">-->
+    <!--<a class="navbar-brand" href="/">KnowGo</a>-->
+
+    <!--</div>-->
+    <!--</header>-->
+    <h1>Welcome to KnowGo!</h1>
+
+    <h2>where would you like to get to?</h2>
+    {{> main}}
+</div>
+</body>
+
+
+<template name="main">
+    <div class="row">
+        {{loggingIn}}
+        {{> loginButtons}}
+        <div class="col-lg-3">
+            <label>From</label>
+            <input class="from-location form-control" type="text">
+            <br>
+            <label>To</label>
+            <input class="to-location form-control" type="text">
+
+            <h4>What's important for you today?</h4>
+
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox">ECO
+                </label>
+            </div>
+            <div class="col-lg-1" align="center">
+                <div class="btn-group btn-toggle">
+                    <button class="eco btn btn-md btn-success active">ECO</button>
+                    <button class="not-eco btn btn-md btn-default">really?</button>
+                </div>
+            </div>
+            <div class="google-json-api">
+                {{#each from_location}}
+                    <!--<button type="button" class="btn btn-default btn-lg">-->
+                    <span class="itemtag">{{name}}</span>
+                    <!--</button>-->
+                {{/each}}
+            </div>
+            <hr>
+            <div class="col-lg-1" align="center">
+                <button type="button" class="btn btn-primary btn-lg">KNOW</button>
+            </div>
+        </div>
+    </div>
+</template>
