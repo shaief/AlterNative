@@ -6,15 +6,13 @@ Template.main.helpers({
     }
 });
 
+Template.main.rendered = function  () {
+    setAutoComplete();
+}
+
 Template.main.events({
     'keyup .from-location': function () {
         Session.set(".google-json-api", Session.get(".from-location"));
-    },
-    'focus .from-location': function(){
-        setAutoComplete();
-    },
-    'focus .to-location': function(){
-        setAutoComplete();
     },
     'click .not-eco': function () {
         console.log('not-eco');
