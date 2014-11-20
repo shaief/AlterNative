@@ -14,6 +14,23 @@ body {
     background: #111;
     color: #666666; }
 
+h1, h2, h3, h4, h5, h6 {
+    color: #5890ad;
+}
+
+.circle {
+    background: #bbbbbb;
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+}
+
+.circle:active {
+    background: #00d6b2;
+}
+
 .know-box div {
     background: #444444;
 }

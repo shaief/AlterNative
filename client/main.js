@@ -7,7 +7,15 @@ Template.main.helpers({
 });
 
 Template.main.events({
-
+    'keyup .from-location': function () {
+        Session.set(".google-json-api", Session.get(".from-location"));
+    },
+    'focus .from-location': function(){
+        setAutoComplete();
+    },
+    'focus .to-location': function(){
+        setAutoComplete();
+    },
     'click .not-eco': function () {
         console.log('not-eco');
         $('.not-eco').toggleClass('btn-danger btn-default');
@@ -21,5 +29,8 @@ Template.main.events({
         $('.eco').toggleClass('btn-success btn-default');
         $('.eco').toggleClass('active');
         $('.not-eco').toggleClass('active');
+    },
+    'click .know': function(){
+        console.log(setDistanceMatric())
     }
 });
