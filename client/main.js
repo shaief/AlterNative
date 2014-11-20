@@ -1,6 +1,3 @@
-// counter starts at 0
-Session.setDefault("counter", 0);
-
 Template.main.helpers({
     from_location: function () {
         if (Session.get("from-location")) {
@@ -37,4 +34,3 @@ Template.main.events({
         console.log(setDistanceMatric())
     }
 });
-
