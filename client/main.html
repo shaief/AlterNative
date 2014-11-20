@@ -30,28 +30,49 @@
 
             <h4>What's important for you today?</h4>
 
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox">ECO
-                </label>
-            </div>
             <div class="col-lg-12 col-md-12 col-xs-12" align="center">
                 <div class="btn-group btn-toggle">
                     <button class="eco btn btn-md btn-success active">ECO</button>
                     <button class="not-eco btn btn-md btn-default">really?</button>
                 </div>
             </div>
-            <div class="google-json-api">
-                {{#each from_location}}
-                    <!--<button type="button" class="btn btn-default btn-lg">-->
-                    <span class="itemtag">{{name}}</span>
-                    <!--</button>-->
-                {{/each}}
-            </div>
-            <hr>
-            <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-                <button type="button" class="btn btn-primary btn-lg">Go!</button>
-            </div>
         </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
+            <label>ECO</label>
+
+            <div class="ecology circle active"></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
+            <label>Calories</label>
+
+            <div class="calories circle"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
+            <label>Money</label>
+
+            <div class="money circle active"></div>
+        </div>
+        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
+            <label>Time</label>
+
+         <div class="time circle"></div>
+        </div>
+    </div>
+
+    <div class="google-json-api">
+        {{#each from_location}}
+            <!--<button type="button" class="btn btn-default btn-lg">-->
+            <span class="itemtag">{{name}}</span>
+            <!--</button>-->
+        {{/each}}
+    </div>
+    <hr>
+    <div class="col-lg-12 col-md-12 col-xs-12" align="center">
+        <button type="button" class="btn btn-primary btn-lg">Go!</button>
     </div>
 </template>
