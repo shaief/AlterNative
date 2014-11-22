@@ -6,6 +6,10 @@ Template.main.helpers({
     }
 });
 
+Template.main.rendered = function  () {
+    setAutoComplete();
+}
+
 Template.main.events({
     'keyup .from-location': function () {
         Session.set(".google-json-api", Session.get(".from-location"));
