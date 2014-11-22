@@ -28,7 +28,7 @@ Template.main.events({
         $('.eco').toggleClass('active');
         $('.not-eco').toggleClass('active');
     },
-    'click .know': function(){
+    'click .know': function() {
         console.log(setDistanceMatric())
     }
 });
