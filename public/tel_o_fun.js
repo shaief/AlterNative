@@ -5,8 +5,8 @@ function toRads(num){
 	return num * Math.PI / 180;
 }
 
-//get lat/long address,return station object that is closest to 
-function getNearestSTation(lat,lon) {
+//get longtitude/lat address,return station object that is closest to 
+function getNearestSTation(lon,lat) {
 	var distance = 0;
 	var minDistance = -1;
 	var result = {};
@@ -18,7 +18,7 @@ function getNearestSTation(lat,lon) {
 		if (stations.hasOwnProperty(station)) {
     		//console.log("station's x,y" + " -> " + stations[station].geometry.x + "," + stations[station].geometry.y);
     		var stationLatLong = getLatLongFromXY(stations[station].geometry.x,stations[station].geometry.y);
-    		console.log(lat,lon,stationLatLong[0],stationLatLong[1]);
+    		//console.log(lat,lon,stationLatLong[0],stationLatLong[1]);
     		distance = calcDistance(lat,lon,stationLatLong[0],stationLatLong[1]);
     		if ((distance<minDistance)||(minDistance<0)){			
     			minDistance = distance;
