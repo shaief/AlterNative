@@ -11,7 +11,7 @@ function getNearestSTation(lat,lon) {
 	var minDistance = -1;
 	var result = {};
 
-	var stations = telOFunStationsDummy.features
+	var stations = telOFunStations.features
 
 	for (station in stations)
 	{
