@@ -1,7 +1,7 @@
 Session.setDefault('main-view', 'set-route');
 
 moveToView = function(view) {
-	Session.setDefault('main-view', view);
+	Session.set('main-view', view);
 }
 
 var mainViewState = function(state) {
