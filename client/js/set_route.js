@@ -1,4 +1,4 @@
-Template.main.helpers({
+Template.setRoute.helpers({
     from_location: function () {
         if (Session.get("from-location")) {
             return Session.get("from-location");
@@ -6,11 +6,11 @@ Template.main.helpers({
     }
 });
 
-Template.main.rendered = function  () {
+Template.setRoute.rendered = function  () {
     setAutoComplete();
 }
 
-Template.main.events({
+Template.setRoute.events({
     'keyup .from-location': function () {
         Session.set(".google-json-api", Session.get(".from-location"));
     },

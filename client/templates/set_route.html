@@ -1,0 +1,67 @@
+<template name="setRoute">
+    <div class="row">
+        {{loggingIn}}
+        {{> loginButtons}}
+        <div class="col-lg-10 col-md-12 col-xs-12">
+            <label align="center">From</label>
+            <input class="from-location form-control" type="text">
+            <br>
+            <label>To</label>
+            <input class="to-location form-control" type="text">
+
+            <div class="shai-buttons">
+                <h4 align="center">What's important for you today?</h4>
+
+                <div class="col-lg-10 col-md-10 col-xs-10 center">
+                    <div class="row center">
+                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+                        <div class="col-lg-2 col-md-2 col-xs-4 canter">
+                            <label>ECO</label>
+
+                            <div class="ecology circle active"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Calories</label>
+
+                            <div class="calories circle"></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Money</label>
+
+                            <div class="money circle"><img class="icon" src="saco.svg" height="25px"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Time</label>
+
+                            <div class="time circle"><img src="Anonymous_sandglass.svg" height="25"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="google-json-api">
+                {{#each from_location}}
+                    <!--<button type="button" class="btn btn-default btn-lg">-->
+                    <span class="itemtag">{{name}}</span>
+                    <!--</button>-->
+                {{/each}}
+            </div>
+            <hr>
+            <div class="col-lg-1" align="center">
+                <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="google-json-api">
+        {{#each from_location}}
+            <!--<button type="button" class="btn btn-default btn-lg">-->
+            <span class="itemtag">{{name}}</span>
+            <!--</button>-->
+        {{/each}}
+    </div>
+    <hr>
+</template>
