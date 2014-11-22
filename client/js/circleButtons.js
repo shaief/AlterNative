@@ -1,9 +1,12 @@
 toggleCircle = function(className, effectFunction){
     $('.circle').not($('.' + className)).removeClass('active');
-    $('.' + className).toggleClass('active');
+    $('.circle.' + className).toggleClass('active');
     effectFunction();
-    $('h4').toggleClass(className);
-    $('h1').toggleClass(className);
+    $('h1').removeClass('ecology calories time money');
+    $('h4').removeClass('ecology calories time money');
+    $('h1').addClass(className);
+    $('h4').addClass(className);
+    $('label').addClass(className);
     Session.set('sorter', className);
 }
 toggleEcology = function () {
