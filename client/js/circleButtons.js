@@ -1,40 +1,31 @@
+toggleCircle = function(className, effectFunction){
+    $('.circle').not($('.' + className)).removeClass('active');
+    $('.' + className).toggleClass('active');
+    effectFunction();
+    $('h4').toggleClass(className);
+    $('h1').toggleClass(className);
+    Session.set('sorter', className);
+}
 toggleEcology = function () {
-    console.log('ecology pressed');
-    $('.circle').not($('.ecology')).removeClass('active');
-    $('.ecology').toggleClass('active');
-    $('body').css("background", "green");
-    $('h1').toggleClass('ecology');
-    $('h4').toggleClass('ecology');
-    $('div').toggleClass('ecology');
+    toggleCircle('ecology', function(){
+        $('body').css("background", "green");    
+    });
 };
 
 toggleCalories = function () {
-    console.log('calories pressed');
-    $('.circle').not($('.calories')).removeClass('active');
-    $('.calories').toggleClass('active');
-    $('body').css("background", "#fff");
-    $('h1').toggleClass('calories');
-    $('h4').toggleClass('calories');
-    $('div').toggleClass('calories');
+    toggleCircle('calories', function(){
+        $('body').css("background", "#fff");    
+    });
 };
 
 toggleTime = function () {
-    console.log('time pressed');
-    $('.circle').not($('.time')).removeClass('active');
-    $('.time').toggleClass('active');
-    $('body').css("background-image", "url('Antique_mechanical_clock.jpg')");
-    $('h1').toggleClass('time');
-    $('h4').toggleClass('time');
-    $('div').toggleClass('time');
+    toggleCircle('time', function(){
+        $('body').css("background-image", "url('Antique_mechanical_clock.jpg')");    
+    });
 };
 
 toggleMoney = function () {
-    console.log('money pressed');
-    $('.circle').not($('.money')).removeClass('active');
-    $('.money').toggleClass('active');
-    $('body').css("background-image", "url('50_NIS_Bill.jpg')");
-    //$('body').css("background-color", "red");
-    $('h1').toggleClass('money');
-    $('h4').toggleClass('money');
-    $('div').toggleClass('money');
+    toggleCircle('money', function(){
+        $('body').css("background-image", "url('50_NIS_Bill.jpg')");    
+    });
 };
