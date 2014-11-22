@@ -1,3 +1,5 @@
+Session.setDefault('sort-by', KnowGo.sortby.ECO);
+
 Template.setRoute.helpers({
     from_location: function () {
         if (Session.get("from-location")) {
@@ -36,7 +38,12 @@ Template.setRoute.events({
     },
     'click .know': function () {
         console.log(setDistanceMatric());
-        moveToView('know');
+        if(Session.get('from') && Session.get('to')){
+            moveToView('know');
+        }
+        else{
+            // TODO: hanlde error
+        }
     },
     'click .ecology': function () {
         console.log('ecology pressed');
