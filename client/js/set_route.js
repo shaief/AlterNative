@@ -35,7 +35,8 @@ Template.setRoute.events({
         $('.not-eco').toggleClass('active');
     },
     'click .know': function () {
-        console.log(setDistanceMatric())
+        console.log(setDistanceMatric());
+        moveToView('know');
     },
     'click .ecology': function () {
         console.log('ecology pressed');
@@ -43,7 +44,6 @@ Template.setRoute.events({
         $('.ecology').toggleClass('active');
         $('body').css("background", "green");
     },
-
     'click .calories': function () {
         console.log('calories pressed');
         $('.circle').not($('.calories')).removeClass('active');
