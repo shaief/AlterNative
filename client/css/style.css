@@ -71,6 +71,22 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
+.ecology {
+    color: #678CB1;
+}
+
+.calories {
+    color: midnightblue;
+}
+
+.time {
+    color: #000000;
+}
+
+.money {
+    color: #678CB1;
+}
+
 .know-box div {
     background: #444444;
 }

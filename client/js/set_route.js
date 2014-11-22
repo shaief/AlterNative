@@ -38,31 +38,18 @@ Template.setRoute.events({
         console.log(setDistanceMatric())
     },
     'click .ecology': function () {
-        console.log('ecology pressed');
-        $('.circle').not($('.ecology')).removeClass('active');
-        $('.ecology').toggleClass('active');
-        $('body').css("background", "green");
+        toggleEcology();
     },
 
     'click .calories': function () {
-        console.log('calories pressed');
-        $('.circle').not($('.calories')).removeClass('active');
-        $('.calories').toggleClass('active');
-        $('body').css("background", "#fff");
+        toggleCalories();
     },
 
     'click .time': function () {
-        console.log('time pressed');
-        $('.circle').not($('.time')).removeClass('active');
-        $('.time').toggleClass('active');
-        $('body').css("background-image", "url('Antique_mechanical_clock.jpg')");
+        toggleTime();
     },
 
     'click .money': function () {
-        console.log('money pressed');
-        $('.circle').not($('.money')).removeClass('active');
-        $('.money').toggleClass('active');
-        $('body').css("background-image", "url('50_NIS_Bill.jpg')");
-        //$('body').css("background-color", "red");
+        toggleMoney();
     }
 });
