@@ -13,9 +13,10 @@ setLocation = function (key, className) {
 	google.maps.event.addListener(autoComplete, 'place_changed', function () {
         var place = autoComplete.getPlace();
         var location = {
-        	name: place.name,	
-        	latitude: place.geometry.location.lat(),
-        	longtitude: place.geometry.location.lng()
+        	name: place.name,
+        	formatted_address: place.formatted_address,	
+        	lat: place.geometry.location.lat(),
+        	lng: place.geometry.location.lng()
         } 
         Session.set(key, location);
     });
@@ -25,14 +26,47 @@ setDistanceMatric = function () {
 	Session.set('distances', {});
 	setDistanceCar();
 	setDistanceWalking();
+	setDistanceTransit();
 }
+
+setDistanceTransit = function() {
+	var origin = $('.from-location').val();
+	var destination = $('.to-location').val();
+	directionsService = new google.maps.DirectionsService();
+	request = {
+	  origin: origin,
+	  destination: destination, 
+	  travelMode: google.maps.TravelMode.TRANSIT
+	};
+	directionsService.route(request, function(response, status) {
+	  console.log(response, status);
+	  var leg = response.routes[0].legs[0];
+
+	  // var steps = leg.steps;
+	  // var totalWalkingTime = 0;
+	  // var totalTransitTime = 0;
+	  // for(var s in steps){
+	  // 	var step = steps[s];
+	  // 	if()
+	  // 		totalWalkingTime += legs.duration.value;
+	  // }
+
+	  var distances = Session.get('distances');
+	  distances[google.maps.TravelMode.TRANSIT] = {
+		duration: leg.duration.value / 60,
+		distance: leg.distance.value / 1000
+	  }
+	  Session.set('distances', distances);
+	});
+}
+
 
 setDistanceCar = function (){
 	setDistanceByType(google.maps.TravelMode.DRIVING);
 }
 
 setDistanceWalking = function () {
-	setDistanceByType(google.maps.TravelMode.WALKING);	
+	setDistanceByType(google.maps.TravelMode.WALKING);
 }
 
 setDistanceByType = function (type) {
