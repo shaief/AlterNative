@@ -23,7 +23,7 @@ body.transparent {
     opacity: 0;
 }
 
-.shai-buttons {
+.circle-buttons {
     /*align-content: center;*/
     /*background: white;*/
     /*opacity: 0.75;*/
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .icon {
-    position:absolute;
+    position: absolute;
     /*top:50%;*/
     /*height:25px;*/
     /*margin-top:5px;*/
@@ -71,19 +71,66 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
-.ecology {
-    color: #678CB1;
+body.ecology {
+    background: green;
 }
 
-.calories {
+body.calories {
+    background: #fff;
+}
+
+body.time {
+    background: #111;
+    background-image: url('Antique_mechanical_clock.jpg');
+}
+
+body.money {
+    background: #222;
+    background-image: url('50_NIS_Bill.jpg');
+}
+
+.ecology h1,
+.ecology h2,
+.ecology h3,
+.ecology h4,
+.ecology h5,
+.ecology h6,
+.ecology label,
+.ecology p {
+    color: #678CB1;
+
+}
+
+.calories h1,
+.calories h2,
+.calories h3,
+.calories h4,
+.calories h5,
+.calories h6,
+.calories label,
+.calories p {
     color: midnightblue;
 }
 
-.time {
+.time h1,
+.time h2,
+.time h3,
+.time h4,
+.time h5,
+.time h6,
+.time label,
+.time p {
     color: #000000;
 }
 
-.money {
+.money h1,
+.money h2,
+.money h3,
+.money h4,
+.money h5,
+.money h6,
+.money label,
+.money p {
     color: #678CB1;
 }
 
