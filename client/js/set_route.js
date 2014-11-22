@@ -35,12 +35,12 @@ Template.setRoute.events({
         $('.not-eco').toggleClass('active');
     },
     'click .know': function () {
-        console.log(setDistanceMatric())
+        console.log(setDistanceMatric());
+        moveToView('know');
     },
     'click .ecology': function () {
         toggleEcology();
     },
-
     'click .calories': function () {
         toggleCalories();
     },
