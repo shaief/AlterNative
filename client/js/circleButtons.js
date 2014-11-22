@@ -28,4 +28,5 @@ toggleMoney = function () {
     toggleCircle('money', function(){
         $('body').css("background-image", "url('50_NIS_Bill.jpg')");    
     });
+
 };
