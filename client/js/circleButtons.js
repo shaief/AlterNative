@@ -5,7 +5,7 @@ toggleEcology = function () {
     $('body').css("background", "green");
     $('h1').toggleClass('ecology');
     $('h4').toggleClass('ecology');
-    $('div').toggleClass('ecology');
+    //$('div').toggleClass('ecology');
 };
 
 toggleCalories = function () {
@@ -15,7 +15,7 @@ toggleCalories = function () {
     $('body').css("background", "#fff");
     $('h1').toggleClass('calories');
     $('h4').toggleClass('calories');
-    $('div').toggleClass('calories');
+    //$('div').toggleClass('calories');
 };
 
 toggleTime = function () {
@@ -25,7 +25,7 @@ toggleTime = function () {
     $('body').css("background-image", "url('Antique_mechanical_clock.jpg')");
     $('h1').toggleClass('time');
     $('h4').toggleClass('time');
-    $('div').toggleClass('time');
+    //$('div').toggleClass('time');
 };
 
 toggleMoney = function () {
@@ -36,5 +36,5 @@ toggleMoney = function () {
     //$('body').css("background-color", "red");
     $('h1').toggleClass('money');
     $('h4').toggleClass('money');
-    $('div').toggleClass('money');
+    //$('div').toggleClass('money');
 };
