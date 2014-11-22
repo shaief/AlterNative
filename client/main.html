@@ -2,7 +2,6 @@
     <title>AlterNative</title>
 </head>
 <body>
-
 <div class="container">
     <!--<header class="navbar navbar-default" role="navigation">-->
     <!--<div class="navbar-header">-->
@@ -10,9 +9,11 @@
 
     <!--</div>-->
     <!--</header>-->
-    <h1>Welcome to KnowGo!</h1>
+    <header>
+        <h4 align="center">Welcome to AlterNative!</h4>
 
-    <h2>where would you like to get to?</h2>
+        <h4 align="center">where would you like to get to?</h4>
+    </header>
     {{> main}}
 </div>
 </body>
@@ -22,19 +23,43 @@
     <div class="row">
         {{loggingIn}}
         {{> loginButtons}}
-        <div class="col-lg-3">
-            <label>From</label>
+        <div class="col-lg-10 col-md-12 col-xs-12">
+            <label align="center">From</label>
             <input class="from-location form-control" type="text">
             <br>
             <label>To</label>
             <input class="to-location form-control" type="text">
 
-            <h4>What's important for you today?</h4>
+            <div class="shai-buttons">
+                <h4 align="center">What's important for you today?</h4>
 
-            <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-                <div class="btn-group btn-toggle">
-                    <button class="eco btn btn-md btn-success active">ECO</button>
-                    <button class="not-eco btn btn-md btn-default">really?</button>
+                <div class="col-lg-10 col-md-10 col-xs-10 center">
+                    <div class="row center">
+                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+                        <div class="col-lg-2 col-md-2 col-xs-4 canter">
+                            <label>ECO</label>
+
+                            <div class="ecology circle active"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Calories</label>
+
+                            <div class="calories circle"></div>
+                        </div>
+                    </div>
+                    <div class="row center">
+                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Money</label>
+
+                            <div class="money circle"><img class="icon" src="saco.svg" height="25px"></div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
+                            <label>Time</label>
+
+                            <div class="time circle"><img src="Anonymous_sandglass.svg" height="25"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="google-json-api">
@@ -51,30 +76,6 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-            <label>ECO</label>
-
-            <div class="ecology circle active"></div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-            <label>Calories</label>
-
-            <div class="calories circle"></div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-            <label>Money</label>
-
-            <div class="money circle active"></div>
-        </div>
-        <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-            <label>Time</label>
-
-         <div class="time circle"></div>
-        </div>
-    </div>
 
     <div class="google-json-api">
         {{#each from_location}}
@@ -84,7 +85,4 @@
         {{/each}}
     </div>
     <hr>
-    <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <button type="button" class="btn btn-primary btn-lg">Go!</button>
-    </div>
 </template>
