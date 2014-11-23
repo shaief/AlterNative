@@ -14,12 +14,11 @@ ctl-helper@1.0.4
 ctl@1.0.2
 ddp@1.0.11
 deps@1.0.5
-ecwyne:polymer-elements@1.0.4
-ecwyne:polymer@1.0.3
 ejson@1.0.4
 email@1.0.4
 fastclick@1.0.1
 follower-livedata@1.0.2
+fuatsengul:leaflet@1.0.1
 geojson-utils@1.0.1
 handlebars@1.0.1
 html-tools@1.0.2
@@ -41,6 +40,7 @@ minimongo@1.0.5
 mizzao:bootstrap-3@3.3.0
 mobile-status-bar@1.0.1
 mongo@1.0.8
+mrt:modernizr-meteor@2.6.2
 npm-bcrypt@0.7.7
 observe-sequence@1.0.3
 ordered-dict@1.0.1

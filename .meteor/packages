@@ -5,10 +5,10 @@
 
 meteor-platform
 insecure
-ecwyne:polymer-elements
 mizzao:bootstrap-3
 underscore
 ian:accounts-ui-bootstrap-3
 accounts-password
 jquery
-
+mrt:modernizr-meteor
+fuatsengul:leaflet
