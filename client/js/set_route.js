@@ -12,7 +12,6 @@ Template.setRoute.events({
         setAutoComplete();
     },
     'click .know': function () {
-        debugger;
         setDistanceMatric();
         if (Session.get('from') && Session.get('to')) {
             moveToView('know');
