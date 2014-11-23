@@ -39,7 +39,6 @@ setDistanceTransit = function() {
 	  travelMode: google.maps.TravelMode.TRANSIT
 	};
 	directionsService.route(request, function(response, status) {
-	  console.log(response, status);
 	  var leg = response.routes[0].legs[0];
 
 	  // var steps = leg.steps;
@@ -74,8 +73,7 @@ setDistanceByType = function (type) {
 	var destination = $('.to-location').val();
 
 	var service = new google.maps.DistanceMatrixService();
-	service.getDistanceMatrix(
-	  {
+	service.getDistanceMatrix({
 	    origins: [origin],
 	    destinations: [destination],
 	    travelMode: type,
@@ -101,3 +99,4 @@ setDistanceByType = function (type) {
 	  	Session.set('distances', distances);
 	}
 }
+
