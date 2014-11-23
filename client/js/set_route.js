@@ -1,13 +1,10 @@
 Session.setDefault('sort-by', KnowGo.sortby.ECO);
 
-Template.setRoute.rendered = function  () {
+Template.setRoute.rendered = function () {
     setAutoComplete();
 };
 
 Template.setRoute.events({
-    'keyup .from-location': function () {
-        Session.set(".google-json-api", Session.get(".from-location"));
-    },
     'focus .from-location': function () {
         setAutoComplete();
     },
@@ -15,25 +12,20 @@ Template.setRoute.events({
         setAutoComplete();
     },
     'click .know': function () {
+        debugger;
         setDistanceMatric();
-        if(Session.get('from') && Session.get('to')){
+        if (Session.get('from') && Session.get('to')) {
             moveToView('know');
         }
-        else{
+        else {
             // TODO: hanlde error
         }
     },
-    'click .ecology': function () {
-        toggleEcology();
-    },
-    'click .calories': function () {
-        toggleCalories();
-    },
-
-    'click .time': function () {
-        toggleTime();
-    },
-    'click .money': function () {
-        toggleMoney();
+    'click .circle': function () {
+        $(".circle").click(function () {
+            var circleId = $(this).attr("id");
+            console.log('the ' + circleId + '  circle button was clicked');
+            toggleCircle(circleId);
+        });
     }
 });
