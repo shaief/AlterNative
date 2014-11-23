@@ -6,7 +6,7 @@ function toRads(num){
 }
 
 //get longtitude/lat address,return station object that is closest to 
-function getNearestSTation(lon,lat) {
+function getNearestStation(lon,lat) {
 	var distance = 0;
 	var minDistance = -1;
 	var result = {};
@@ -30,12 +30,11 @@ function getNearestSTation(lon,lat) {
     		console.log("ERROR: station not found!");
     	}
 	}
-
 	//console.log("RETURNED station:"+unescape(result.attributes.Shem_tachana));
 	return result;
 }
 
-//assumes X,Y in ITM
+//assumes X,Y coordinates in ITM
 function getLatLongFromXY(x,y){
     
     //definition of ITM according to http://spatialreference.org/ref/epsg/2039/proj4/
