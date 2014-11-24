@@ -8,7 +8,7 @@ setCurrentLoaction = function (argument) {
             _setCurrentLoaction()
         },
         function (error) {
-            console.log(error);
+            // console.log(error);
         }
     );
 }        
@@ -18,7 +18,7 @@ _setCurrentLoaction = function  () {
     var lng = Session.get('current_location').lng;
     var latlng = new google.maps.LatLng(lat, lng);
     geocoder.geocode({'latLng': latlng}, function(results, status) {
-      console.log(results);
+      // console.log(results);
       var formatted_address = results[0].formatted_address
       Session.set('from', {
         formatted_address: formatted_address,

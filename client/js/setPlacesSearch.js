@@ -52,9 +52,10 @@ setDistanceTransit = function() {
 
 	  var distances = Session.get('distances');
 	  distances[google.maps.TravelMode.TRANSIT] = {
-		duration: leg.duration.value / 60,
-		distance: leg.distance.value / 1000
-	  }
+			duration: leg.duration.value / 60,
+			distance: leg.distance.value / 1000,
+			name: 'bus'
+		}
 	  Session.set('distances', distances);
 	});
 }
@@ -88,7 +89,8 @@ setDistanceByType = function (type) {
 	  	var distances = Session.get('distances');
 	  	distances[type] = {
 	  		duration: element.duration.value / 60,
-	  		distance: element.distance.value / 1000
+	  		distance: element.distance.value / 1000,
+	  		name: type.toLocaleLowerCase()
 	  	}
 	  	if(type == google.maps.TravelMode.WALKING) {
 	  		distances[google.maps.TravelMode.BICYCLING] = {

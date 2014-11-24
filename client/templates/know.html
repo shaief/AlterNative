@@ -25,6 +25,17 @@
             </div>
         </div>
         <hr>
+        {{#each routes}}
+            <div>
+                <div>
+                    {{name}}
+                </div>
+                <div>
+                    Speed: {{duration}}
+                </div>
+            </div>
+            
+        {{/each}}
         <div class="col-lg-1" align="center">
             <button type="button" class="back btn btn-primary btn-lg">back</button>
         </div>
