@@ -4,16 +4,14 @@ Template.know.rendered = function() {
 
 Template.know.helpers({
     routes: function () {
+        var sorter = getSorter(Session.get('sorter'));
         var distances = Session.get('distances');
         var rides = Object.keys(distances).map(function(type, i) {
             var ride = distances[type];
-           // ride.type = type;
            console.log(ride);
             return ride;
         })
-        .sort(function(ride1, ride2){
-            return -1;
-        });
+        .sort(sorter);
         return rides;
     }
 });
