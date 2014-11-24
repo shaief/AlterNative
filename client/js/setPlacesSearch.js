@@ -27,6 +27,10 @@ setDistanceMatric = function () {
 	setDistanceCar();
 	setDistanceWalking();
 	setDistanceTransit();
+	Meteor.setTimeout(function () {
+		var distances = calculateCaloriesEmmissions(Session.get('distances'));
+		Session.set('distances', distances);
+	}, 1000);
 }
 
 setDistanceTransit = function() {
@@ -54,7 +58,8 @@ setDistanceTransit = function() {
 	  distances[google.maps.TravelMode.TRANSIT] = {
 			duration: leg.duration.value / 60,
 			distance: leg.distance.value / 1000,
-			name: 'bus'
+			name: 'bus',
+			type: google.maps.TravelMode.TRANSIT
 		}
 	  Session.set('distances', distances);
 	});
@@ -90,12 +95,15 @@ setDistanceByType = function (type) {
 	  	distances[type] = {
 	  		duration: element.duration.value / 60,
 	  		distance: element.distance.value / 1000,
-	  		name: type.toLocaleLowerCase()
+	  		name: type.toLocaleLowerCase(),
+	  		type: type 
 	  	}
 	  	if(type == google.maps.TravelMode.WALKING) {
 	  		distances[google.maps.TravelMode.BICYCLING] = {
 		  		duration: element.duration.value / 60 / 4,
-		  		distance: element.distance.value / 1000
+		  		distance: element.distance.value / 1000,
+		  		name: 'bike',
+		  		type: google.maps.TravelMode.BICYCLING
 		  	}	
 	  	}
 	  	Session.set('distances', distances);
