@@ -1,39 +1,43 @@
-body {
-    color: #666666;
-    background: no-repeat center center fixed;
+html {
+    background: url('the-road-ahead-black-and-white-douglas-barnard.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    /*-webkit-transition: background-image 1s linear;*/
-    /*-moz-transition: background-image 1s linear;*/
-    /*-o-transition: background-image 1s linear;*/
-    /*transition: background-image 1s linear;*/
-    /*-webkit-transition-duration: 1s;*/
-    /*-moz-transition-duration: 1s;*/
-    /*-o-transition-duration: 1s;*/
-    /*transition-duration: 1s;*/
-    -webkit-transition: opacity 1s linear;
-    -moz-transition: opacity 1s linear;
-    -o-transition: opacity 1s linear;
-    transition: opacity 1s linear;
+    -webkit-transition: background 1s ease-in;
+    -moz-transition: background 1s ease-in;
+    -o-transition: background 1s ease-in;
+    transition: background 1s ease-in;
 }
 
-body.transparent {
-    opacity: 0;
+html {
+    color: #666666;
+    opacity: 100;
+    -webkit-transition: background 1s ease-in;
+    -moz-transition: background 1s ease-in;
+    -o-transition: background 1s ease-in;
+    transition: background 1s ease-in;
+}
+
+body {
+    height: 100%;
 }
 
 .circle-buttons {
     /*align-content: center;*/
     /*background: white;*/
     /*opacity: 0.75;*/
-    /*padding: 2.5px;*/
+    padding: 2.5px;
     /*border-width: 2.5px;*/
-    /*margin: 2.5px;*/
+    margin: 2.5px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #5890ad;
+    color: black;
+}
+
+div {
+    opacity: 100;
 }
 
 .center {
@@ -42,10 +46,16 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: auto;
 }
 
+label{
+    align-content: center;
+}
+
 .circle {
+    display: inline-block;
     background: #bbbbbb;
     width: 50px;
     height: 50px;
+    margin: 5px;
     align-content: center;
     vertical-align: middle;
     position:relative;
@@ -71,22 +81,46 @@ h1, h2, h3, h4, h5, h6 {
     vertical-align: middle;
 }
 
-body.ecology {
-    background: green;
+.ecology {
+    background: rgba(1,133,113, 0.5);
+    opacity: 50;
+    /*background-image: url('the-road-ahead-black-and-white-douglas-barnard.jpg');*/
 }
 
-body.calories {
-    background: #fff;
+.calories {
+    background: rgba(128,205,193, 0.5);
+    opacity: 50;
+    /*background-image: url('the-road-ahead-black-and-white-douglas-barnard.jpg');*/
 }
 
-body.time {
-    background: #111;
-    background-image: url('Antique_mechanical_clock.jpg');
+.money {
+    background: rgba(223,194,125, 0.5);
+    opacity: 50;
+    /*background-image: url('the-road-ahead-black-and-white-douglas-barnard.jpg');*/
 }
 
-body.money {
-    background: #222;
-    background-image: url('50_NIS_Bill.jpg');
+.time {
+    background: rgba(166,97,26, 0.5);
+    opacity: 50;
+    /*background-image: url('the-road-ahead-black-and-white-douglas-barnard.jpg');*/
+}
+
+.transparent {
+	zoom: 1;
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+.header {
+    background: mediumslateblue;
+
+}
+
+h1, h2, h3, h4, h5, h6, label, p {
+-webkit-transition: color 1s ease-in;
+-moz-transition: color 1s ease-in;
+-o-transition: color 1s ease-in;
+transition: color 1s ease-in;
 }
 
 .ecology h1,
@@ -97,7 +131,7 @@ body.money {
 .ecology h6,
 .ecology label,
 .ecology p {
-    color: #678CB1;
+    color: whitesmoke;
 
 }
 
@@ -109,18 +143,7 @@ body.money {
 .calories h6,
 .calories label,
 .calories p {
-    color: midnightblue;
-}
-
-.time h1,
-.time h2,
-.time h3,
-.time h4,
-.time h5,
-.time h6,
-.time label,
-.time p {
-    color: #000000;
+    color: black;
 }
 
 .money h1,
@@ -131,7 +154,18 @@ body.money {
 .money h6,
 .money label,
 .money p {
-    color: #678CB1;
+    color: black;
+}
+
+.time h1,
+.time h2,
+.time h3,
+.time h4,
+.time h5,
+.time h6,
+.time label,
+.time p {
+    color: whitesmoke;
 }
 
 .know-box div {

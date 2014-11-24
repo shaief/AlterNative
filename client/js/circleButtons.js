@@ -1,16 +1,10 @@
-toggleCircle = function(circleId){
-    $('.circle').not($('#' + circleId)).removeClass('active');
-    $('.circle#' + circleId).toggleClass('active');
+toggleCircle = function(circleClass){
+    //$('.circle').children().not($('span.' + circleClass)).removeClass('active');
+    $('.' + circleClass).parent("div.circle").siblings().removeClass("active");
+    $('.' + circleClass).parent("div.circle").toggleClass('active');
 
-    // remove all category classes
-    $('body').removeClass('ecology calories time money');
-    $('h1').removeClass('ecology calories time money');
-    $('h4').removeClass('ecology calories time money');
-
-    // add only relevant class
-    $('body').addClass(circleId);
-    $('h1').addClass(circleId);
-    $('h4').addClass(circleId);
-    $('label').addClass(circleId);
-
+    // remove all category classes and add only relevant class
+    $('body').removeClass('ecology calories time money').addClass(circleClass);
+    $('h1').removeClass('ecology calories time money').addClass(circleClass);
+    $('h4').removeClass('ecology calories time money').addClass(circleClass);
 };
