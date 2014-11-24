@@ -19,41 +19,34 @@
             <div class="circle-buttons row">
                 <h4 class="transparent" align="center">What's important for you today?</h4>
 
-                <label>ECO</label>
+                <div class="circle-buttons">
+                    <h4 align="center">What's important for you today?</h4>
+                    <label>ECO</label>
 
-                <div class="circle active">
-                    <span class="ecology"></span>
-                </div>
-                <label>Calories</label>
+                    <div class="circle active">
+                        <span class="ecology"></span>
+                    </div>
+                    <label>Calories</label>
 
-                <div class="circle">
-                    <span class="calories"></span>
-                </div>
-                <label>Money</label>
+                    <div class="circle">
+                        <span class="calories"></span>
+                    </div>
+                    <label>Money</label>
 
-                <div class="circle">
-                    <span class="money"></span>
-                </div>
-                <label>Time</label>
+                    <div class="circle">
+                        <span class="money"></span>
+                    </div>
+                    <label>Time</label>
 
-                <div class="circle">
-                    <span class="time"></span>
+                    <div class="circle">
+                        <span class="time"></span>
+                    </div>
                 </div>
-            </div>
-            <hr>
-            <div class="col-lg-1" align="center">
-                <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
+                <hr>
+                <div class="col-lg-1" align="center">
+                    <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
+                </div>
             </div>
         </div>
     </div>
-
-
-    <div class="google-json-api">
-        {{#each from_location}}
-            <!--<button type="button" class="btn btn-default btn-lg">-->
-            <span class="itemtag">{{name}}</span>
-            <!--</button>-->
-        {{/each}}
-    </div>
-    <hr>
 </template>

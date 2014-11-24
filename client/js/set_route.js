@@ -2,6 +2,7 @@ Session.setDefault('sort-by', KnowGo.sortby.ECO);
 
 Template.setRoute.rendered = function () {
     setAutoComplete();
+    setCurrentLoaction();
 };
 
 Template.setRoute.events({
