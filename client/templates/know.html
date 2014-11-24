@@ -1,27 +1,27 @@
 <template name="know">
     <div class="circle-buttons">
         <h4 align="center">How do we go from here?</h4>
+
         <div class="row" align="center">
-            <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-                <label>ECO</label>
+            <label>ECO</label>
 
-                <div class="ecology circle"></div>
+            <div class="circle active">
+                <span class="ecology"></span>
             </div>
-            <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-                <label>Calories</label>
+            <label>Calories</label>
 
-                <div class="calories circle"></div>
+            <div class="circle">
+                <span class="calories"></span>
             </div>
+            <label>Money</label>
 
-            <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-                <label>Money</label>
-
-                <div class="money circle"></div>
+            <div class="circle">
+                <span class="money"></span>
             </div>
-            <div class="col-lg-2 col-md-2 col-xs-2" align="center">
-                <label>Time</label>
+            <label>Time</label>
 
-                <div class="time circle"></div>
+            <div class="circle">
+                <span class="time"></span>
             </div>
         </div>
         <hr>
@@ -36,6 +36,11 @@
             </div>
             
         {{/each}}
+
+        <div class="col-lg-1" align="center">
+            <span class="back arrow-left"></span>
+        </div>
+
         <div class="col-lg-1" align="center">
             <button type="button" class="back btn btn-primary btn-lg">back</button>
         </div>

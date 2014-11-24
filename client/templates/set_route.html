@@ -8,65 +8,41 @@
         {{loggingIn}}
         {{> loginButtons}}
         <div class="col-lg-10 col-md-12 col-xs-12">
-            <label align="center">From</label>
-            <input class="from-location form-control" type="text">
-            <br>
-            <label>To</label>
-            <input class="to-location form-control" type="text">
-        
-            <div class="circle-buttons">
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <label align="center">From</label>
+                <input class="from-location form-control" type="text">
+            </div>
+            <div class="col-lg-6 col-md-6 col-xs-6">
+                <label>To</label>
+                <input class="to-location form-control" type="text">
+            </div>
+            <div class="circle-buttons row">
                 <h4 align="center">What's important for you today?</h4>
+                    <label>ECO</label>
 
-                <div class="col-lg-10 col-md-10 col-xs-10 center">
-                    <div class="row center">
-                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
-                        <div class="col-lg-2 col-md-2 col-xs-4">
-                            <label>ECO</label>
-
-                            <div id="ecology" class="circle active"></div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
-                            <label>Calories</label>
-
-                            <div id="calories" class="circle"></div>
-                        </div>
+                    <div class="circle active">
+                        <span class="ecology"></span>
                     </div>
-                    <div class="row center">
-                        <div class="col-lg-2 col-md-2 col-xs-2"></div>
-                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
-                            <label>Money</label>
+                    <label>Calories</label>
 
-                            <div id="money" class="circle"></div>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-xs-4" align="center">
-                            <label>Time</label>
-
-                            <div id="time" class="circle"></div>
-                        </div>
+                    <div class="circle">
+                        <span class="calories"></span>
                     </div>
+                    <label>Money</label>
+
+                    <div class="circle">
+                        <span class="money"></span>
+                    </div>
+                    <label>Time</label>
+
+                    <div class="circle">
+                        <span class="time"></span>
+                    </div>
+                <hr>
+                <div class="col-lg-1" align="center">
+                    <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
                 </div>
-            </div>
-            <div class="google-json-api">
-                {{#each from_location}}
-                    <!--<button type="button" class="btn btn-default btn-lg">-->
-                    <span class="itemtag">{{name}}</span>
-                    <!--</button>-->
-                {{/each}}
-            </div>
-            <hr>
-            <div class="col-lg-1" align="center">
-                <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
             </div>
         </div>
     </div>
-
-
-    <div class="google-json-api">
-        {{#each from_location}}
-            <!--<button type="button" class="btn btn-default btn-lg">-->
-            <span class="itemtag">{{name}}</span>
-            <!--</button>-->
-        {{/each}}
-    </div>
-    <hr>
 </template>

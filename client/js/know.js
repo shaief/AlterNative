@@ -22,10 +22,10 @@ Template.know.events({
 
 Template.know.events({
     'click .circle': function () {
-        $(".circle").click(function () {
-            var circleId = $(this).attr("id");
-            console.log('the ' + circleId + '  circle button was clicked');
-            toggleCircle(circleId);
+        $(".circle").unbind().click(function () {
+            var circleClass = $(this).children().attr("class");
+            console.log('the ' + circleClass + '  circle button was clicked');
+            toggleCircle(circleClass);
         });
     }
 });
