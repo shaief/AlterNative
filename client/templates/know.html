@@ -26,15 +26,23 @@
         </div>
         <hr>
         {{#each routes}}
-            <div>
-                <div>
-                    {{name}}
-                </div>
-                <div>
-                    Speed: {{duration}}
+            <div class="result">
+                <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <ul>
+                            <li>
+                                <h4 class="result-text">Method {{name}}</h4>
+                            </li>
+                            <li>
+                                <h4 class="result-text">Time {{duration}}</h4>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <button class="btn btn-lg btn-success">GO!</button>
+                    </div>
                 </div>
             </div>
-            
         {{/each}}
 
         <div class="col-lg-1" align="center">

@@ -1,3 +1,7 @@
+Template.know.rendered = function() {
+    toggleCircle(Session.get('sorter'));
+};
+
 Template.know.helpers({
     routes: function () {
         var distances = Session.get('distances');
@@ -12,7 +16,7 @@ Template.know.helpers({
         });
         return rides;
     }
-})
+});
 
 Template.know.events({
     'click .back': function () {
