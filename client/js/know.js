@@ -7,9 +7,7 @@ Template.know.helpers({
            console.log(ride);
             return ride;
         })
-        .sort(function(ride1, ride2){
-            return -1;
-        });
+        .sort(getSorter());
         return rides;
     }
 })

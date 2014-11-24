@@ -1,7 +1,7 @@
 KnowGo = {};
 KnowGo.sortby = {
-	ECO: "ECOLOGICAL",
-	CAL: "CALORIES",
-	MONEY: "MONEY",
-	TIME: "TIME"
+	ECO: "ecology",
+	CAL: "calories",
+	MONEY: "money",
+	TIME: "time"
 }
