@@ -1,13 +1,13 @@
 Template.know.helpers({
     routes: function () {
+        var sorter = getSorter(Session.get('sorter'));
         var distances = Session.get('distances');
         var rides = Object.keys(distances).map(function(type, i) {
             var ride = distances[type];
-           // ride.type = type;
            console.log(ride);
             return ride;
         })
-        .sort(getSorter());
+        .sort(sorter);
         return rides;
     }
 })

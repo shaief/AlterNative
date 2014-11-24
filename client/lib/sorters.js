@@ -1,9 +1,9 @@
 ecoSorter = function(ride1, ride2){
-	return -1;
+	return 0;
 }
 
 calSorter = function (ride1, ride2) {
-	return -1;
+	return 1;
 }
 
 moneySorter = function (ride1, ride2) {
@@ -20,6 +20,6 @@ sorters[KnowGo.sortby.CAL] = calSorter;
 sorters[KnowGo.sortby.MONEY] = moneySorter;
 sorters[KnowGo.sortby.TIME] = timeSorter;
 
-getSorter = function () {
-	return sorters[Session.get('sorter')];
+getSorter = function (sorter) {
+	return sorters[sorter];
 }
