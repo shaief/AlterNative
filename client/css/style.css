@@ -1,5 +1,5 @@
 html {
-    background: url('the-road-ahead-black-and-white-douglas-barnard.jpg') no-repeat center center fixed;
+    background: url('images/backgrounds/the-road-ahead-black-and-white-douglas-barnard.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -11,8 +11,6 @@ html {
 }
 
 html {
-    color: #666666;
-    opacity: 100;
     -webkit-transition: background 1s ease-in;
     -moz-transition: background 1s ease-in;
     -o-transition: background 1s ease-in;
@@ -25,6 +23,9 @@ body {
 
 div.container {
     height: 100%;
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .circle-buttons {
