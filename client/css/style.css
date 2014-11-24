@@ -23,6 +23,10 @@ body {
     height: 100%;
 }
 
+div.container {
+    height: 100%;
+}
+
 .circle-buttons {
     /*align-content: center;*/
     /*background: white;*/
