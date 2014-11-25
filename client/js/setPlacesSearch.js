@@ -56,8 +56,8 @@ setDistanceTransit = function() {
 
 	  var distances = Session.get('distances');
 	  distances[google.maps.TravelMode.TRANSIT] = {
-			duration: leg.duration.value / 60,
-			distance: leg.distance.value / 1000,
+			duration: (leg.duration.value / 60).toFixed(0),
+			distance: (leg.distance.value / 1000).toFixed(2),
 			name: 'bus',
 			type: google.maps.TravelMode.TRANSIT
 		}
@@ -93,15 +93,15 @@ setDistanceByType = function (type) {
 		var element = response.rows[0].elements[0]
 	  	var distances = Session.get('distances');
 	  	distances[type] = {
-	  		duration: element.duration.value / 60,
-	  		distance: element.distance.value / 1000,
+	  		duration: (element.duration.value / 60).toFixed(0),
+	  		distance: (element.distance.value / 1000).toFixed(2),
 	  		name: type.toLocaleLowerCase(),
 	  		type: type 
 	  	}
 	  	if(type == google.maps.TravelMode.WALKING) {
 	  		distances[google.maps.TravelMode.BICYCLING] = {
-		  		duration: element.duration.value / 60 / 4,
-		  		distance: element.distance.value / 1000,
+		  		duration: (element.duration.value / 60 / 4).toFixed(0),
+		  		distance: (element.distance.value / 1000).toFixed(2),
 		  		name: 'bike',
 		  		type: google.maps.TravelMode.BICYCLING
 		  	}	
