@@ -8,7 +8,6 @@ Template.know.helpers({
         var distances = Session.get('distances');
         var rides = Object.keys(distances).map(function(type, i) {
             var ride = distances[type];
-           console.log(ride);
             return ride;
         })
         .sort(sorter);

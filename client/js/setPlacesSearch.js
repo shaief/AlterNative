@@ -1,3 +1,6 @@
+
+Session.setDefault('distances');
+
 setAutoComplete = function (){
     setLocation ("from", 'from-location');
     setLocation ("to", 'to-location');   
@@ -27,10 +30,11 @@ setDistanceMatric = function () {
 	setDistanceCar();
 	setDistanceWalking();
 	setDistanceTransit();
+	setTelOfunRoute();	
 	Meteor.setTimeout(function () {
 		var distances = calculateCaloriesEmmissions(Session.get('distances'));
 		Session.set('distances', distances);
-	}, 1000);
+	}, 3000);
 }
 
 setDistanceTransit = function() {
@@ -74,9 +78,11 @@ setDistanceWalking = function () {
 	setDistanceByType(google.maps.TravelMode.WALKING);
 }
 
-setDistanceByType = function (type) {
-	var origin = $('.from-location').val();
-	var destination = $('.to-location').val();
+setDistanceByType = function (type, callback, origin, destination) {
+	if(!origin)
+		var origin = $('.from-location').val();
+	if(!destination)
+		var destination = $('.to-location').val();
 
 	var service = new google.maps.DistanceMatrixService();
 	service.getDistanceMatrix({
@@ -87,9 +93,9 @@ setDistanceByType = function (type) {
 	    durationInTraffic: false,
 	    avoidHighways: false,
 	    avoidTolls: false
-	  }, callback);
+	  }, callback || defaultCallback);
 
-	function callback(response, status) {
+	function defaultCallback(response, status) {
 		var element = response.rows[0].elements[0]
 	  	var distances = Session.get('distances');
 	  	distances[type] = {
@@ -98,15 +104,57 @@ setDistanceByType = function (type) {
 	  		name: type.toLocaleLowerCase(),
 	  		type: type 
 	  	}
-	  	if(type == google.maps.TravelMode.WALKING) {
-	  		distances[google.maps.TravelMode.BICYCLING] = {
-		  		duration: element.duration.value / 60 / 4,
-		  		distance: element.distance.value / 1000,
-		  		name: 'bike',
-		  		type: google.maps.TravelMode.BICYCLING
-		  	}	
-	  	}
+	  	// if(type == google.maps.TravelMode.WALKING) {
+	  	// 	distances[google.maps.TravelMode.BICYCLING] = {
+		  // 		duration: element.duration.value / 60 / 4,
+		  // 		distance: element.distance.value / 1000,
+		  // 		name: 'bike',
+		  // 		type: google.maps.TravelMode.BICYCLING
+		  // 	}	
+	  	// }
 	  	Session.set('distances', distances);
 	}
 }
 
+setTelOfunRoute = function(){
+
+	var start = Session.get('from');
+	var end = Session.get('to');
+	var telOfunStart = getNearestStation(start.lng, start.lat);
+	var telOfunEnd = getNearestStation(end.lng, end.lat);
+	var telOfunRoute = [
+		start,
+		telOfunStart,
+		telOfunEnd,
+		end
+	];
+	setDistanceByType(
+		google.maps.TravelMode.WALKING, 
+		telOfunWalkCallback, 
+		new google.maps.LatLng(start.lat, start.lng), 
+		new google.maps.LatLng(telOfunStart.lat, telOfunStart.lng)
+	);
+};
+
+telOfunBikeCallback = function(response, status){
+	var time = response.rows[0].elements[0].duration.value;
+	var bike = Session.get('distances')[google.maps.TravelMode.BICYCLING] || {
+		name: 'bike',
+		duration: 0
+	};
+	bike.duration += time / 60 / 4;
+	distances[google.maps.TravelMode.BICYCLING] = bike;
+	Session.set('distances', distances);
+}
+
+telOfunWalkCallback = function(response, status){
+	var distances = Session.get('distances');
+	var time = response.rows[0].elements[0].duration.value;
+	var bike = distances[google.maps.TravelMode.BICYCLING] || {
+		duration: 0,
+		name: 'bike'
+	};
+	bike.duration += time / 60;
+	distances[google.maps.TravelMode.BICYCLING] = bike;
+	Session.set('distances', distances);
+}
