@@ -15,6 +15,7 @@ html, body {
 
 html, body {
     height: 100%;
+    font-family: Alef, sans-serif;
 }
 
 body {
@@ -184,9 +185,22 @@ transition: color 1s ease-in;
 }
 
 .result {
+    margin: 10px;
+    padding: 5px;
+    border-width:5px;
     background: rgba(0, 0, 0, 0.75);
 }
 
-.result-text {
+h4.result-text {
     color: white;
+}
+
+.go-btn {
+    vertical-align: text-bottom;
+    margin: 10px;
+}
+
+.about{
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.75);
 }
