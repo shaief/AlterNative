@@ -1,7 +1,7 @@
 setAutoComplete = function (){
     setLocation ("from", 'from-location');
-    setLocation ("to", 'to-location');   
-}
+    setLocation ("to", 'to-location');
+};
 
 setLocation = function (key, className) {
 	var input = document.getElementsByClassName(className)[0];
@@ -14,13 +14,13 @@ setLocation = function (key, className) {
         var place = autoComplete.getPlace();
         var location = {
         	name: place.name,
-        	formatted_address: place.formatted_address,	
+        	formatted_address: place.formatted_address,
         	lat: place.geometry.location.lat(),
         	lng: place.geometry.location.lng()
-        } 
+        }
         Session.set(key, location);
     });
-}
+};
 
 setDistanceMatric = function () {
 	Session.set('distances', {});
@@ -31,7 +31,7 @@ setDistanceMatric = function () {
 		var distances = calculateCaloriesEmmissions(Session.get('distances'));
 		Session.set('distances', distances);
 	}, 1000);
-}
+};
 
 setDistanceTransit = function() {
 	var origin = $('.from-location').val();
@@ -39,7 +39,7 @@ setDistanceTransit = function() {
 	directionsService = new google.maps.DirectionsService();
 	request = {
 	  origin: origin,
-	  destination: destination, 
+	  destination: destination,
 	  travelMode: google.maps.TravelMode.TRANSIT
 	};
 	directionsService.route(request, function(response, status) {
@@ -59,20 +59,21 @@ setDistanceTransit = function() {
 			duration: (leg.duration.value / 60).toFixed(0),
 			distance: (leg.distance.value / 1000).toFixed(2),
 			name: 'bus',
-			type: google.maps.TravelMode.TRANSIT
-		}
+			type: google.maps.TravelMode.TRANSIT,
+			name: 'bus'
+		};
 	  Session.set('distances', distances);
 	});
-}
+};
 
 
 setDistanceCar = function (){
 	setDistanceByType(google.maps.TravelMode.DRIVING);
-}
+};
 
 setDistanceWalking = function () {
 	setDistanceByType(google.maps.TravelMode.WALKING);
-}
+};
 
 setDistanceByType = function (type) {
 	var origin = $('.from-location').val();
@@ -104,9 +105,16 @@ setDistanceByType = function (type) {
 		  		distance: (element.distance.value / 1000).toFixed(2),
 		  		name: 'bike',
 		  		type: google.maps.TravelMode.BICYCLING
-		  	}	
+		  	};
+	  		name: type.toLocaleLowerCase()
+	  	}
+	  	if(type == google.maps.TravelMode.WALKING) {
+	  		distances[google.maps.TravelMode.BICYCLING] = {
+			duration: (element.duration.value / 60 / 4).toFixed(0),
+				distance: (element.distance.value / 1000).toFixed(2)
+		  	}
 	  	}
 	  	Session.set('distances', distances);
 	}
-}
+};
 
