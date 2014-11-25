@@ -8,5 +8,5 @@ toggleCircle = function(circleClass){
     $('h1').removeClass('ecology calories time money').addClass(circleClass);
     $('h4').removeClass('ecology calories time money').addClass(circleClass);
 
-    Session.set('sorter', circleClass);
+    Session.set('sort-by', circleClass);
 };

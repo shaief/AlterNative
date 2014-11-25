@@ -21,11 +21,9 @@ Template.setRoute.events({
             // TODO: hanlde error
         }
     },
-    'click .circle': function () {
-        $(".circle").unbind().click(function () {
-            var circleClass = $(this).children().attr("class");
-            console.log('the ' + circleClass + '  circle button was clicked');
-            toggleCircle(circleClass);
-        });
+    'click .circle': function (jQueryEvent, BlazeTemplateInstance) {
+        var circleClass = $(jQueryEvent.target).children().attr("class");
+        console.log('the ' + circleClass + '  circle button was clicked');
+        toggleCircle(circleClass);
     }
 });
