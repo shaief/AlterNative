@@ -43,7 +43,7 @@ setDistanceTransit = function() {
 	directionsService = new google.maps.DirectionsService();
 	request = {
 	  origin: origin,
-	  destination: destination, 
+	  destination: destination,
 	  travelMode: google.maps.TravelMode.TRANSIT
 	};
 	directionsService.route(request, function(response, status) {
@@ -114,7 +114,7 @@ setDistanceByType = function (type, callback, origin, destination) {
 	  	// }
 	  	Session.set('distances', distances);
 	}
-}
+};
 
 setTelOfunRoute = function(){
 
