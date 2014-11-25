@@ -10,3 +10,9 @@ toggleCircle = function(circleClass){
 
     Session.set('sort-by', circleClass);
 };
+
+circleClickHandler = function (jQueryEvent, BlazeTemplateInstance) {
+    var circleClass = $(jQueryEvent.target).children().attr("class");
+    console.log('the ' + circleClass + '  circle button was clicked');
+    toggleCircle(circleClass);
+}
