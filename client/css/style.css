@@ -204,3 +204,9 @@ h4.result-text {
     padding: 5px;
     background: rgba(255, 255, 255, 0.75);
 }
+
+
+#map-canvas {
+    width: 100%;
+    height: 100%;
+}
