@@ -12,3 +12,6 @@ accounts-password
 jquery
 mrt:modernizr-meteor
 fuatsengul:leaflet
+iron:router
+autopublish
+

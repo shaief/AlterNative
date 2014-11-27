@@ -19,10 +19,8 @@ Template.know.helpers({
 Template.know.events({
     'click .back': function () {
         moveToView('set-route');
-    }
-});
-
-Template.know.events({
-    'click .circle': circleClickHandler
+    },
+    'click .circle': circleClickHandler,
+    'click .go-btn': function(){}
 });
 
