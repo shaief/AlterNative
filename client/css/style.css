@@ -1,25 +1,65 @@
-html {
-    background: url('images/backgrounds/Tel_Aviv_Tayelet.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+@media only screen and (min-device-width: 900px) {
+    /* styles for wide screens */
+    html {
+        background: url('images/backgrounds/Tel_Aviv_Tayelet.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    html, body {
+        height: 100%;
+        font-family: Alef, sans-serif;
+    }
+}
+
+@media only screen and (max-device-width: 480px) {
+    /* styles for wide screens */
+    body {
+        width: 100%;
+        font-family: Alef, sans-serif;
+    }
 }
 
 html, body {
-    -webkit-transition: background 0.5s ease-in;
-    -moz-transition: background 0.5s ease-in;
-    -o-transition: background 0.5s ease-in;
-    transition: background 0.5s ease-in;
-}
-
-html, body {
-    height: 100%;
-    font-family: Alef, sans-serif;
+    -webkit-transition: background 0.25s ease-in;
+    -moz-transition: background 0.25s ease-in;
+    -o-transition: background 0.25s ease-in;
+    transition: background 0.25s ease-in;
 }
 
 body {
     background: rgba(255, 255, 255, 0);
+    padding-top: 70px;
+
+}
+
+.navbar-default {
+    direction: rtl;
+    text-align: center;
+    background-color: #009492;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 48px;
+    line-height: 0px;
+}
+
+.navbar-default .navbar-brand {
+    color: black;
+}
+
+.logo {
+    float: right;
+    margin: 1px;
+}
+
+.navbar-brand {
+    padding: 5px;
 }
 
 div.container {
@@ -48,7 +88,7 @@ div {
     margin-right: auto;
 }
 
-label{
+label {
     align-content: center;
 }
 
@@ -57,10 +97,10 @@ label{
     background: #bbbbbb;
     width: 50px;
     height: 50px;
-    margin: 5px;
+    margin: 20px;
     align-content: center;
     vertical-align: middle;
-    position:relative;
+    position: relative;
     border-color: white;
     border-width: 10px;
     -webkit-border-radius: 50%;
@@ -70,7 +110,7 @@ label{
 }
 
 .circle:active, .active {
-    background: #00d6b2;
+    background: #89CCC7;
     box-shadow: 0px 0px 3px 3px;
 }
 
@@ -81,39 +121,38 @@ label{
 }
 
 .ecology {
-    background: rgba(1,133,113, 0.5);
+    background: rgba(1, 133, 113, 0.5);
     opacity: 50;
 }
 
 .calories {
-    background: rgba(128,205,193, 0.5);
+    background: rgba(128, 205, 193, 0.5);
     opacity: 50;
 }
 
 .money {
-    background: rgba(223,194,125, 0.5);
+    background: rgba(223, 194, 125, 0.5);
     opacity: 50;
 }
 
 .time {
-    background: rgba(166,97,26, 0.5);
+    background: rgba(166, 97, 26, 0.5);
     opacity: 50;
 }
 
 .transparent {
-	zoom: 1;
-	filter: alpha(opacity=50);
-	opacity: 0.5;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
 }
 
 h1, h2, h3, h4, h5, h6, label, p {
--webkit-transition: color 1s ease-in;
--moz-transition: color 1s ease-in;
--o-transition: color 1s ease-in;
-transition: color 1s ease-in;
+    -webkit-transition: color 1s ease-in;
+    -moz-transition: color 1s ease-in;
+    -o-transition: color 1s ease-in;
+    transition: color 1s ease-in;
 }
 
-.ecology h1,
 .ecology h2,
 .ecology h3,
 .ecology h4,
@@ -126,7 +165,6 @@ transition: color 1s ease-in;
 
 }
 
-.calories h1,
 .calories h2,
 .calories h3,
 .calories h4,
@@ -138,7 +176,6 @@ transition: color 1s ease-in;
     background: rgba(255, 255, 255, 0);
 }
 
-.money h1,
 .money h2,
 .money h3,
 .money h4,
@@ -150,7 +187,6 @@ transition: color 1s ease-in;
     background: rgba(255, 255, 255, 0);
 }
 
-.time h1,
 .time h2,
 .time h3,
 .time h4,
@@ -162,32 +198,18 @@ transition: color 1s ease-in;
     background: rgba(255, 255, 255, 0);
 }
 
+.circle-label {
+    margin: -10px;
+}
+
 .know-box div {
     background: #444444;
-}
-
-.arrow-right {
-	width: 0;
-	height: 0;
-	border-top: 60px solid transparent;
-	border-bottom: 60px solid transparent;
-
-	border-left: 60px solid green;
-}
-
-.arrow-left {
-	width: 0;
-	height: 0;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid transparent;
-
-	border-right:10px solid blue;
 }
 
 .result {
     margin: 10px;
     padding: 5px;
-    border-width:5px;
+    border-width: 5px;
     background: rgba(0, 0, 0, 0.75);
 }
 
@@ -200,7 +222,8 @@ h4.result-text {
     margin: 10px;
 }
 
-.about{
+.about {
+    align-items: center;
     padding: 5px;
     background: rgba(255, 255, 255, 0.75);
 }
