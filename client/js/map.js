@@ -15,7 +15,6 @@ initializeMap = function () {
         center: chicago
     };
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
     directionsDisplay.setMap(map);
 }
 
@@ -26,7 +25,7 @@ calcRoute = function () {
     var request = {
         origin:start,
         destination:end,
-        travelMode: google.maps.TravelMode.DRIVING
+        travelMode: Session.get('choosen').type
     };
     directionsService.route(request, function(result, status) {
         if (status == google.maps.DirectionsStatus.OK) {
