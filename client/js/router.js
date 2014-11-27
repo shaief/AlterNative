@@ -1,3 +1,7 @@
-/**
- * Created by jak on 27/11/14.
- */
+Router.route('/map', function () {
+    this.render('map');
+});
+
+Router.route('', function () {
+    this.render('main');
+});

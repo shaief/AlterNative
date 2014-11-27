@@ -1,46 +1,48 @@
 <template name="setRoute">
-    <header>
-        <h4 align="center">Welcome to AlterNative!</h4>
-        <h4 align="center">where would you like to get to?</h4>
-    </header>
+    <div class="container">
+        <header>
+            <h4 align="center">Welcome to AlterNative!</h4>
+            <h4 align="center">where would you like to get to?</h4>
+        </header>
 
-    <div class="row">
-        {{loggingIn}}
-        {{> loginButtons}}
-        <div class="col-lg-10 col-md-12 col-xs-12">
-            <div class="col-lg-6 col-md-6 col-xs-12">
-                <label align="center">From</label>
-                <input class="from-location form-control" type="text">
-            </div>
-            <div class="col-lg-6 col-md-6 col-xs-12">
-                <label>To</label>
-                <input class="to-location form-control" type="text">
-            </div>
-            <div class="circle-buttons row">
-                <h4 align="center">What's important for you today?</h4>
-                    <label>ECO</label>
+        <div class="row">
+            {{loggingIn}}
+            {{> loginButtons}}
+            <div class="col-lg-10 col-md-12 col-xs-12">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <label align="center">From</label>
+                    <input class="from-location form-control" type="text">
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <label>To</label>
+                    <input class="to-location form-control" type="text">
+                </div>
+                <div class="circle-buttons row">
+                    <h4 align="center">What's important for you today?</h4>
+                        <label>ECO</label>
 
-                    <div class="circle active">
-                        <span class="ecology"></span>
+                        <div class="circle active">
+                            <span class="ecology"></span>
+                        </div>
+                        <label>Calories</label>
+
+                        <div class="circle">
+                            <span class="calories"></span>
+                        </div>
+                        <label>Money</label>
+
+                        <div class="circle">
+                            <span class="money"></span>
+                        </div>
+                        <label>Time</label>
+
+                        <div class="circle">
+                            <span class="time"></span>
+                        </div>
+                    <hr>
+                    <div class="col-lg-1" align="center">
+                        <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
                     </div>
-                    <label>Calories</label>
-
-                    <div class="circle">
-                        <span class="calories"></span>
-                    </div>
-                    <label>Money</label>
-
-                    <div class="circle">
-                        <span class="money"></span>
-                    </div>
-                    <label>Time</label>
-
-                    <div class="circle">
-                        <span class="time"></span>
-                    </div>
-                <hr>
-                <div class="col-lg-1" align="center">
-                    <button type="button" class="know btn btn-primary btn-lg">KNOW</button>
                 </div>
             </div>
         </div>
