@@ -142,7 +142,7 @@ telOfunBikeCallback = function(response, status){
 	var bike = Session.get('distances')[google.maps.TravelMode.BICYCLING] || {
 		name: 'bike',
 		duration: 0,
-		type: google.maps.TravelMode.WALKING
+		type: google.maps.TravelMode.BICYCLING
 	};
 	bike.duration += time / 60 / 4;
 	distances[google.maps.TravelMode.BICYCLING] = bike;
@@ -155,7 +155,7 @@ telOfunWalkCallback = function(response, status){
 	var bike = distances[google.maps.TravelMode.BICYCLING] || {
 		duration: 0,
 		name: 'bike',
-		type: google.maps.TravelMode.WALKING
+		type: google.maps.TravelMode.BICYCLING
 	};
 	bike.duration += time / 60;
 	distances[google.maps.TravelMode.BICYCLING] = bike;
