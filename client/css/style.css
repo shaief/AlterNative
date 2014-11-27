@@ -31,8 +31,13 @@ html, body {
 
 body {
     background: rgba(255, 255, 255, 0);
-    padding-top: 70px;
+    /*padding-top: 70px;*/
 
+}
+
+#map-canvas {
+    width: 400px;
+    height: 400px;
 }
 
 .navbar-default {
@@ -110,8 +115,8 @@ label {
 }
 
 .circle:active, .active {
-    background: #89CCC7;
-    box-shadow: 0px 0px 3px 3px;
+    background: #F49719; /*#89CCC7;*/
+    box-shadow: -2px -2px 0px 0px;
 }
 
 .icon {
@@ -199,7 +204,8 @@ h1, h2, h3, h4, h5, h6, label, p {
 }
 
 .circle-label {
-    margin: -10px;
+    margin-top: 55px;
+    margin-right: 5px;
 }
 
 .know-box div {
