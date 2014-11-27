@@ -23,6 +23,16 @@ Template.know.events({
     },
     'click .circle': circleClickHandler,
     'click .go-btn': function (jQueryEvent, BlazeTemplateInstance){
+        var navRecord = {
+            name: this.name,
+            transType:this.type,
+            distance:this.distance,
+            duration:this.duration,
+            date:new Date,
+            origin: Session.get('from').formatted_address,
+            destination: Session.get('to').formatted_address
+        };
+        UserNavigations.insert(navRecord);
         var type = $(jQueryEvent.target).parents('.result')[0].classList[1];
         var choosen = Session.get('distances')[type];
         Session.set('choosen', choosen);
