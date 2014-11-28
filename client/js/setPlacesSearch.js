@@ -105,7 +105,7 @@ setDistanceByType = function (type, callback, origin, destination) {
         var distances = Session.get('distances');
         var price;
         if(type == google.maps.TravelMode.DRIVING){
-            price = 2.738 * element.distance.value / 60;
+            price = 2.738 * element.distance.value / 1000;
             price = Number(price.toFixed(2));
         }
         else {
