@@ -14,26 +14,22 @@ var initializeMap = function () {
 };
 
 var calcRoute = function () {
-    var start = Session.get('from').formatted_address;
-    var end = Session.get('to').formatted_address;
-
-
+    var start = new google.maps.LatLng(Session.get('to').lat, Session.get('to').lng);
+    var end = new google.maps.LatLng(Session.get('from').lat, Session.get('from').lng);
     var request = {
         origin:start,
         destination:end,
         travelMode: Session.get('choosen').type
     };
-
     if(Session.get('choosen').type == google.maps.TravelMode.BICYCLING){
-
-        request.travelMode = google.maps.TravelMode.WALKING; var telOfunRoute = Session.get('tel-o-fun-route');
-        var telOfunStart = new google.maps.LatLng(telOfunRoute[1].lat, telOfunRoute[1].lng);
-        var telOfunEnd = new google.maps.LatLng(telOfunRoute[2].lat, telOfunRoute[2].lng);;
+        request.travelMode = google.maps.TravelMode.WALKING;
+        var telOfunStart = new google.maps.LatLng(Session.get('tel-o-fun-start').lat, Session.get('tel-o-fun-start').lng);
+        var telOfunEnd = new google.maps.LatLng(Session.get('tel-o-fun-end').lat, Session.get('tel-o-fun-end').lng);
         var waypoints = [telOfunStart, telOfunEnd];
         waypoints = waypoints.map(function(place){
             return {
                 stopover: false,
-                location: place.toString()
+                location: place
             };
         });
         request.waypoints = waypoints;
