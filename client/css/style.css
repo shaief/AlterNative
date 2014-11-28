@@ -37,10 +37,10 @@
     html, body {
         height: 100%;
         font-family: Alef, sans-serif;
-        -webkit-transition: background 1s ease-out;
-        -moz-transition: background 1s ease-out;
-        -o-transition: background 1s ease-out;
-        transition: background 1s ease-out;
+        -webkit-transition: background 0.2s ease-out;
+        -moz-transition: background 0.2s ease-out;
+        -o-transition: background 0.2s ease-out;
+        transition: background 0.2s ease-out;
     }
 
     body {
@@ -134,6 +134,11 @@ label {
     margin-bottom: 0px;
 }
 
+.from-location,
+.to-location {
+    font-size: 24px;
+}
+
 .circle {
     display: inline-block;
     background: #bbbbbb;
@@ -193,10 +198,10 @@ span.ecology{
 }
 
 h1, h2, h3, h4, h5, h6, label, p {
-    -webkit-transition: color 1s ease-in;
-    -moz-transition: color 1s ease-in;
-    -o-transition: color 1s ease-in;
-    transition: color 1s ease-in;
+    -webkit-transition: color 0.2s ease-in;
+    -moz-transition: color 0.2s ease-in;
+    -o-transition: color 0.2s ease-in;
+    transition: color 0.2s ease-in;
 }
 
 .ecology h2,
@@ -252,6 +257,11 @@ h1, h2, h3, h4, h5, h6, label, p {
 .know-box div {
     background: #444444;
 }
+
+.know {
+    margin-top: -15px;
+}
+
 
 .result {
     margin: 10px;
