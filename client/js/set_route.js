@@ -16,7 +16,7 @@ Template.setRoute.events({
     'click .know': function () {
         setDistanceMatric();
         if (Session.get('from') && Session.get('to')) {
-            moveToView('know');
+
         }
         else {
             // TODO: hanlde error
