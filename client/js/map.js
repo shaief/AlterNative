@@ -14,8 +14,8 @@ var initializeMap = function () {
 };
 
 var calcRoute = function () {
-    var start = new google.maps.LatLng(Session.get('to').lat, Session.get('to').lng);
-    var end = new google.maps.LatLng(Session.get('from').lat, Session.get('from').lng);
+    var end = new google.maps.LatLng(Session.get('to').lat, Session.get('to').lng);
+    var start = new google.maps.LatLng(Session.get('from').lat, Session.get('from').lng);
     var request = {
         origin:start,
         destination:end,
