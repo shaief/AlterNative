@@ -1,38 +1,53 @@
-@media only screen and (min-device-width: 900px) {
-    /* styles for wide screens */
+@media only screen and (min-device-width: 480px) {
     html {
         background: url('images/backgrounds/Tel_Aviv_Tayelet.jpg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        box-sizing: content-box
     }
 
     html, body {
         height: 100%;
         font-family: Alef, sans-serif;
+        -webkit-transition: background 0.25s ease-in;
+        -moz-transition: background 0.25s ease-in;
+        -o-transition: background 0.25s ease-in;
+        transition: background 0.25s ease-in;
+    }
+
+    body {
+        background: rgba(255, 255, 255, 0);
+        /*padding-top: 70px;*/
+
     }
 }
 
 @media only screen and (max-device-width: 480px) {
-    /* styles for wide screens */
-    body {
-        width: 100%;
-        font-family: Alef, sans-serif;
+    html {
+        background: url('images/backgrounds/Tel_Aviv_Tayelet.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        box-sizing: content-box
     }
-}
 
-html, body {
-    -webkit-transition: background 0.25s ease-in;
-    -moz-transition: background 0.25s ease-in;
-    -o-transition: background 0.25s ease-in;
-    transition: background 0.25s ease-in;
-}
+    html, body {
+        height: 100%;
+        font-family: Alef, sans-serif;
+        -webkit-transition: background 1s ease-out;
+        -moz-transition: background 1s ease-out;
+        -o-transition: background 1s ease-out;
+        transition: background 1s ease-out;
+    }
 
-body {
-    background: rgba(255, 255, 255, 0);
-    /*padding-top: 70px;*/
+    body {
+        background: rgba(128, 128, 128, 0);
+        /*padding-top: 70px;*/
 
+    }
 }
 
 #map-canvas {
@@ -48,19 +63,39 @@ body {
 
 .navbar-brand {
     float: left;
-    height: 50px;
-    padding: 15px 15px;
+    /*height: 50px;*/
+    /*margin: 10px;*/
+    /*padding: 15px 15px;*/
     font-size: 48px;
-    line-height: 0px;
+    line-height: 25px;
+}
+
+img.navbar-brand {
+    vertical-align: text-top;
 }
 
 .navbar-default .navbar-brand {
     color: black;
 }
 
-.logo {
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: black;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #F49719;
+}
+
+.navbar-brand.logo {
+    float: left;
+    margin: -5px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.navbar-brand.logo-text {
     float: right;
-    margin: 1px;
 }
 
 .navbar-brand {
@@ -95,6 +130,8 @@ div {
 
 label {
     align-content: center;
+    margin-top: 5px;
+    margin-bottom: 0px;
 }
 
 .circle {
@@ -128,6 +165,10 @@ label {
 .ecology {
     background: rgba(1, 133, 113, 0.5);
     opacity: 50;
+}
+
+circle.ecology{
+    background-image: url("images/ecology.png");
 }
 
 .calories {
@@ -234,8 +275,8 @@ h4.result-text {
     background: rgba(255, 255, 255, 0.75);
 }
 
-
 #map-canvas {
     width: 100%;
     height: 100%;
 }
+

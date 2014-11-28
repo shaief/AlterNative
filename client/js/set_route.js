@@ -1,10 +1,7 @@
-Template.setRoute.rendered = function() {
-    toggleCircle("ecology");
-};
-
 Session.setDefault('sort-by', KnowGo.sortby.ECO);
 
 Template.setRoute.rendered = function () {
+    toggleCircle("ecology");
     setAutoComplete();
     setCurrentLoaction();
 };
