@@ -8,16 +8,13 @@
         box-sizing: content-box
     }
 
-    html, body {
+    body {
         height: 100%;
         font-family: Alef, sans-serif;
         -webkit-transition: background 0.25s ease-in;
         -moz-transition: background 0.25s ease-in;
         -o-transition: background 0.25s ease-in;
         transition: background 0.25s ease-in;
-    }
-
-    body {
         background: rgba(255, 255, 255, 0);
         /*padding-top: 70px;*/
 
@@ -62,7 +59,9 @@
 }
 
 .navbar-brand {
-    float: left;
+    margin-left: auto;
+    margin-right: auto;
+    float:none;
     /*height: 50px;*/
     /*margin: 10px;*/
     /*padding: 15px 15px;*/
@@ -144,7 +143,7 @@ label {
     background: #bbbbbb;
     width: 50px;
     height: 50px;
-    margin: 20px;
+    margin: 20px 0px 10px 0px;
     align-content: center;
     vertical-align: middle;
     position: relative;
@@ -262,6 +261,9 @@ h1, h2, h3, h4, h5, h6, label, p {
     margin-top: -15px;
 }
 
+input.form-control{
+    margin: 5px;
+}
 
 .result {
     margin: 10px;
