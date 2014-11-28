@@ -8,7 +8,7 @@ calculateCaloriesEmmissions = function (distances) {
 	distances[google.maps.TravelMode.BICYCLING].emmissions = 0;
 	distances[google.maps.TravelMode.BICYCLING].calories = 9.45 * distances[google.maps.TravelMode.BICYCLING].duration; //9.45 calories burnt / minute
   	distances[google.maps.TravelMode.TRANSIT].emmissions = 101 * distances[google.maps.TravelMode.TRANSIT].distance; //101g CO2 / KM
-	distances[google.maps.TravelMode.TRANSIT].calories= 0;
+	distances[google.maps.TravelMode.TRANSIT].calories = 0;
 	return distances;
 }
 

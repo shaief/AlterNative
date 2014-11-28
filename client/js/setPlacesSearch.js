@@ -153,6 +153,7 @@ setTelOfunRoute = function () {
 };
 
 telOfunBikeCallback = function (response, status) {
+    var distances = Session.get('distances');
     var time = response.rows[0].elements[0].duration.value;
     var bike = Session.get('distances')[google.maps.TravelMode.BICYCLING] || {
             name: 'bike',
