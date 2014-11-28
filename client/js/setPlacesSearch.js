@@ -48,7 +48,7 @@ setDistanceMatric = function () {
     Meteor.setTimeout(function () {
         var distances = calculateCaloriesEmmissions(Session.get('distances'));
         Session.set('distances', distances);
-    }, 1000);
+    }, 700);
 }
 
 setDistanceTransit = function () {
@@ -68,7 +68,7 @@ setDistanceTransit = function () {
             distance: leg.distance.value / 1000,
             name: 'bus',
             type: google.maps.TravelMode.TRANSIT,
-            price: 5.90
+            price: 6.90
         };
         Session.set('distances', distances);
     });
@@ -146,9 +146,9 @@ setTelOfunRoute = function () {
     );
     setDistanceByType(
         google.maps.TravelMode.WALKING,
-        telOfunWalkCallback,
-        new google.maps.LatLng(start.lat, start.lng),
-        new google.maps.LatLng(end.lat, end.lng)
+        telOfunBikeCallback,
+        new google.maps.LatLng(telOfunStart.lat, telOfunStart.lng),
+        new google.maps.LatLng(telOfunEnd.lat, telOfunEnd.lng)
     );
 };
 

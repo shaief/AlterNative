@@ -15,12 +15,6 @@ Template.setRoute.events({
     },
     'click .know': function () {
         setDistanceMatric();
-        if (Session.get('from') && Session.get('to')) {
-
-        }
-        else {
-            // TODO: hanlde error
-        }
     },
     'click .circle': circleClickHandler
 });
