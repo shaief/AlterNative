@@ -20,9 +20,6 @@ Template.know.helpers({
 });
 
 Template.know.events({
-    'click .back': function () {
-        moveToView('set-route');
-    },
     'click .circle': circleClickHandler,
     'click .go-btn': function (jQueryEvent, BlazeTemplateInstance){
         var navRecord = {
