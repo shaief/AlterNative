@@ -9,6 +9,8 @@ Template.know.helpers({
         var rides = Object.keys(distances).map(function(type, i) {
             var ride = distances[type];
             ride.duration = Number(ride.duration.toFixed(0));
+            ride.emmissions = Number(ride.emmissions.toFixed(0));
+            ride.calories = Number(ride.calories.toFixed(0));
             ride.type = type;
             return ride;
         })

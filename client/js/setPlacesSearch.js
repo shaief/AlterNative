@@ -33,7 +33,7 @@ setDistanceMatric = function () {
     Meteor.setTimeout(function () {
         var distances = calculateCaloriesEmmissions(Session.get('distances'));
         Session.set('distances', distances);
-    }, 3000);
+    }, 1000);
 }
 
 setDistanceTransit = function () {
@@ -52,7 +52,8 @@ setDistanceTransit = function () {
             duration: leg.duration.value / 60,
             distance: leg.distance.value / 1000,
             name: 'bus',
-            type: google.maps.TravelMode.TRANSIT
+            type: google.maps.TravelMode.TRANSIT,
+            price: 5.90
         };
         Session.set('distances', distances);
     });
@@ -83,26 +84,36 @@ setDistanceByType = function (type, callback, origin, destination) {
         avoidTolls: false
     }, callback || defaultCallback);
 
+
     function defaultCallback(response, status) {
+        var element = response.rows[0].elements[0];
+        var distances = Session.get('distances');
+        var price;
+        if(type == google.maps.TravelMode.DRIVING){
+            price = 2.738 * element.distance.value / 60;
+            price = Number(price.toFixed(2));
+        }
+        else {
+            price = 0;
+        }
         var element = response.rows[0].elements[0]
         var distances = Session.get('distances');
         distances[type] = {
             duration: element.duration.value / 60,
             distance: element.distance.value / 1000,
             name: type.toLocaleLowerCase(),
-            type: type
+            type: type,
+            price: price
         }
         Session.set('distances', distances);
     }
 };
 
 setTelOfunRoute = function () {
-
     var start = Session.get('from');
     var end = Session.get('to');
     var telOfunStart = getNearestStation(start.lng, start.lat);
     var telOfunEnd = getNearestStation(end.lng, end.lat);
-
     Session.set('tel-o-fun-start', telOfunStart);
     Session.set('tel-o-fun-end', telOfunEnd);
 
@@ -131,7 +142,8 @@ telOfunBikeCallback = function (response, status) {
     var bike = Session.get('distances')[google.maps.TravelMode.BICYCLING] || {
             name: 'bike',
             duration: 0,
-            type: google.maps.TravelMode.BICYCLING
+            type: google.maps.TravelMode.BICYCLING,
+            price: 0.76
         };
     bike.duration += time / 60 / 4;
     distances[google.maps.TravelMode.BICYCLING] = bike;
@@ -144,7 +156,8 @@ telOfunWalkCallback = function (response, status) {
     var bike = distances[google.maps.TravelMode.BICYCLING] || {
             duration: 0,
             name: 'bike',
-            type: google.maps.TravelMode.BICYCLING
+            type: google.maps.TravelMode.BICYCLING,
+            price: 0.76
         };
     bike.duration += time / 60;
     distances[google.maps.TravelMode.BICYCLING] = bike;
