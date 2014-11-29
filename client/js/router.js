@@ -3,13 +3,13 @@ Router.route('/map', function () {
 });
 
 Router.route('/know', function () {
-    if (Session.get('to')) {
-        this.render('know');
+        if (Session.get('to')) {
+            this.render('know');
+        }
+        else {
+            Router.go('/');
+        }
     }
-    else {
-        Router.go('/');
-    }
-}
 );
 
 Router.route('/', function () {
