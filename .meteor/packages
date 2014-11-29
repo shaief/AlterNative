@@ -6,12 +6,11 @@
 meteor-platform
 insecure
 mizzao:bootstrap-3
-underscore
 ian:accounts-ui-bootstrap-3
 accounts-password
-jquery
 mrt:modernizr-meteor
 fuatsengul:leaflet
 iron:router
 autopublish
+jquery
 
