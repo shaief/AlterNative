@@ -14,7 +14,7 @@ Template.setRoute.events({
         setAutoComplete();
     },
     'click .know': function () {
-        setDistanceMatric();
+
     },
     'click .circle': circleClickHandler
 });
