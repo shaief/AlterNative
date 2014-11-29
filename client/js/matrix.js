@@ -33,16 +33,14 @@ setDistanceWalking = function (callback) {
 };
 
 setDistanceByType = function (type, callback, _origin, _destination) {
-    if (!origin) {
-        var origin = new google.maps.LatLng(
-            Session.get('from').lat,
+    if (!_origin) { var origin = new google.maps.LatLng(Session.get('from').lat,
             Session.get('from').lng
         );
     }
     else{
         var origin = _origin;
     }
-    if (!destination) {
+    if (!_destination) {
         var destination = new google.maps.LatLng(
             Session.get('to').lat,
             Session.get('to').lng
@@ -72,7 +70,7 @@ setTelOfunRoute = function () {
     Session.set('tel-o-fun-end', telOfunEnd);
 
     var deferredArray = [];
-    deferred1 = new $.Deferred();
+    var deferred1 = new $.Deferred();
     setDistanceByType(
         google.maps.TravelMode.WALKING,
         function(response, status) {
@@ -82,7 +80,7 @@ setTelOfunRoute = function () {
         new google.maps.LatLng(start.lat, start.lng),
         new google.maps.LatLng(telOfunStart.lat, telOfunStart.lng)
     );
-    deferred2 = new $.Deferred();
+    var deferred2 = new $.Deferred();
     setDistanceByType(
         google.maps.TravelMode.WALKING,
         function(response, status) {
@@ -91,7 +89,7 @@ setTelOfunRoute = function () {
         },new google.maps.LatLng(telOfunEnd.lat, telOfunEnd.lng),
         new google.maps.LatLng(end.lat, end.lng)
     );
-    deferred3 = new $.Deferred();
+    var deferred3 = new $.Deferred();
     setDistanceByType(
         google.maps.TravelMode.WALKING,
         function(response, status) {
@@ -110,6 +108,7 @@ setTelOfunRoute = function () {
 };
 
 telOfunBikeCallback = function (response, status) {
+
     var distances = Session.get('distances');
     var time = response.rows[0].elements[0].duration.value;
     var bike = Session.get('distances')[google.maps.TravelMode.BICYCLING] || {
