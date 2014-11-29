@@ -3,6 +3,7 @@ setDistanceMatric = function () {
     setDistanceTransit(setDataTransit);
     setDistanceCar(setDataDriving);
     setDistanceWalking(setDataWalking);
+    setDistanceTaxi(setDataTaxi);
     setTelOfunRoute();
 };
 
@@ -25,6 +26,10 @@ setDistanceTransit = function (callback) {
 };
 
 setDistanceCar = function (callback) {
+    setDistanceByType(google.maps.TravelMode.DRIVING, callback, null, null);
+};
+
+setDistanceTaxi = function (callback) {
     setDistanceByType(google.maps.TravelMode.DRIVING, callback, null, null);
 };
 
