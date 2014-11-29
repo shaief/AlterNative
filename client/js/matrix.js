@@ -7,8 +7,14 @@ setDistanceMatric = function () {
 };
 
 setDistanceTransit = function (callback) {
-    var origin = Session.get('from').formatted_address;
-    var destination = Session.get('to').formatted_address;
+    var origin = new google.maps.LatLng(
+        Session.get('from').lat,
+        Session.get('from').lng
+    );
+    var destination = new google.maps.LatLng(
+        Session.get('to').lat,
+        Session.get('to').lng
+    );
     directionsService = new google.maps.DirectionsService();
     request = {
         origin: origin,
@@ -28,13 +34,19 @@ setDistanceWalking = function (callback) {
 
 setDistanceByType = function (type, callback, _origin, _destination) {
     if (!origin) {
-        var origin = Session.get('from').formatted_address;
+        var origin = new google.maps.LatLng(
+            Session.get('from').lat,
+            Session.get('from').lng
+        );
     }
     else{
         var origin = _origin;
     }
     if (!destination) {
-        var destination = Session.get('to').formatted_address;
+        var destination = new google.maps.LatLng(
+            Session.get('to').lat,
+            Session.get('to').lng
+        );
     }
     else{
         var destination = _destination;
