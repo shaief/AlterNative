@@ -87,9 +87,8 @@ img.navbar-brand {
 
 .navbar-brand.logo {
     float: right;
-    margin: -5px;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin: 5px;
+
 }
 
 .navbar-brand.logo-text {
@@ -297,3 +296,16 @@ h4.result-text {
 
 }
 
+.result h1,
+.result h2,
+.result h3,
+.result h4,
+.result h5,
+.result h6,
+.result p {
+    color: white;
+}
+
+h4.question {
+    margin-top: 30px;
+}

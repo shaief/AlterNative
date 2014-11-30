@@ -1,10 +1,10 @@
 <template name="know">
     <div class="container">
-        <div class="row">
+        <div class="row  center-block">
             <div class="circle-buttons">
                 <h4 align="center">What is most important to you today?</h4>
 
-                <div class="row" align="center">
+                <div class="row center-block">
                     <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-2 col-lg-2 col-md-2 col-sm-2 col-xs-3">
                         <div class="circle active">
                             <label class="circle-label">ECO</label>
@@ -32,28 +32,27 @@
                 </div>
                 <hr>
             </div>
-            <div class="row" align="left">
+            <div class="row center-block">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                     {{#each routes}}
                         <div class="result {{type}}">
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                                    <img src="/images/{{name}}.png" height="10px">
+                                    <h2 class="result-text" align="center">{{name}}</h2>
                                     <ul>
                                         <li>
-                                            <h4 class="result-text">{{name}}</h4>
+                                            <h5 class="result-text">{{duration}} Minutes</h5>
                                         </li>
                                         <li>
-                                            <h5 class="result-text">Time {{duration}} Minutes</h5>
+                                            <h5 class="result-text">{{price}} NIS</h5>
                                         </li>
                                         <li>
-                                            <h5 class="result-text">Money {{price}} NIS</h5>
-                                        </li>
-                                        <li>
-                                            <h5 class="result-text">Emmissions {{emmissions}} g/CO2</h5>
+                                            <h5 class="result-text">{{emmissions}} g/CO2</h5>
                                         </li>
 
                                         <li>
-                                            <h5 class="result-text">Calories {{calories}}</h5>
+                                            <h5 class="result-text">{{calories}} Calories</h5>
                                         </li>
 
                                     </ul>
