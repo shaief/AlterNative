@@ -17,7 +17,7 @@ setDistanceTransit = function (callback) {
         Session.get('to').lng
     );
     directionsService = new google.maps.DirectionsService();
-    request = {
+    var request = {
         origin: origin,
         destination: destination,
         travelMode: google.maps.TravelMode.TRANSIT
