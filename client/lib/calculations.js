@@ -28,7 +28,7 @@ setDataTaxi = function (response, status) {
 		duration: element.duration.value / 60,
 		distance: element.distance.value / 1000,
 		name: alternativeTaxiString.toLocaleLowerCase(),
-		type: alternativeTaxiString,
+		type: google.maps.TravelMode.DRIVING,
 		price: price,
 		emmissions: 271 * element.distance.value / 1000, //271g CO2 per KM
 		calories: 0
