@@ -6,14 +6,15 @@ alternativeTaxiString = "taxi";
 setDataDriving = function (response, status) {
 	var distances = Session.get('distances');
 	var element = response.rows[0].elements[0];
-	var price = 2.738 * element.distance.value / 1000;
+	var price = (2.738 * element.distance.value / 1000).toFixed(2);
+
 	distances[google.maps.TravelMode.DRIVING] = {
 		duration: element.duration.value / 60,
 		distance: element.distance.value / 1000,
 		name: google.maps.TravelMode.DRIVING.toLocaleLowerCase(),
 		type: google.maps.TravelMode.DRIVING,
 		price: price,
-		emmissions: 271 * element.distance.value, //271g CO2 per KM
+		emmissions: 271 * element.distance.value / 1000, //271g CO2 per KM
 		calories: 0
 	};
 	Session.set('distances', distances);
@@ -22,14 +23,14 @@ setDataDriving = function (response, status) {
 setDataTaxi = function (response, status) {
 	var distances = Session.get('distances');
 	var element = response.rows[0].elements[0];
-	var price = 12.3 + (element.distance.value / 1000 * 0.7834) + (element.duration.value / 60 * 0.3);
+	var price = (12.3 + (element.distance.value / 1000 * 0.7834) + (element.duration.value / 60 * 0.3)).toFixed(2);
 	distances[alternativeTaxiString] = {
 		duration: element.duration.value / 60,
 		distance: element.distance.value / 1000,
 		name: alternativeTaxiString.toLocaleLowerCase(),
 		type: alternativeTaxiString,
 		price: price,
-		emmissions: 271 * element.distance.value, //271g CO2 per KM
+		emmissions: 271 * element.distance.value / 1000, //271g CO2 per KM
 		calories: 0
 	};
 	Session.set('distances', distances);
@@ -47,7 +48,7 @@ setDataWalking = function (response, status) {
 		type: google.maps.TravelMode.WALKING,
 		price: price,
 		emmissions: 0,
-		calories: 4.4 * element.duration.value //4.4 calories burnt / minute
+		calories: 4.4 * element.duration.value / 60 //4.4 calories burnt / minute
 	};
 	Session.set('distances', distances);
 };
@@ -61,7 +62,7 @@ setDataTransit = function (response, status) {
 		name: 'bus',
 		type: google.maps.TravelMode.TRANSIT,
 		price: 6.90,
-		emmissions: 101 * leg.distance.value,
+		emmissions: 101 * leg.distance.value / 1000,
 		calories: 0
 	};
 	Session.set('distances', distances);
