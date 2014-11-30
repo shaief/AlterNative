@@ -13,10 +13,13 @@
    id="svg3407"
    version="1.1"
    inkscape:version="0.91pre1 r13432"
-   width="435.41025"
-   height="71.715866"
-   viewBox="0 0 435.41025 71.715866"
-   sodipodi:docname="AlterNative_logo.svg">
+   width="188.50429"
+   height="32.000004"
+   viewBox="0 0 188.50429 32.000004"
+   sodipodi:docname="AlterNative_logo.svg"
+   inkscape:export-filename="/home/shaief/Programming/meteor/AlterNative/public/images/AlterNative_logo.png"
+   inkscape:export-xdpi="95.376381"
+   inkscape:export-ydpi="95.376381">
   <metadata
      id="metadata3413">
     <rdf:RDF>
@@ -45,8 +48,8 @@
      id="namedview3409"
      showgrid="false"
      inkscape:zoom="0.71840659"
-     inkscape:cx="113.99003"
-     inkscape:cy="11.137731"
+     inkscape:cx="113.99002"
+     inkscape:cy="11.137732"
      inkscape:window-x="0"
      inkscape:window-y="37"
      inkscape:window-maximized="0"
@@ -180,23 +183,23 @@ wEUhAi4CLgoRcMHH/wCGqTehleojKAAAAABJRU5ErkJggg==
 "
      id="image3415"
      x="306.64166"
-     y="-132.76491" />
+     y="-172.48077" />
   <path
      style="fill:#000000"
-     d="m 383.91026,60.728389 c 6.18692,-5.59533 12.41801,-11.12092 14.15113,-11.95071 7.54761,-3.61369 18.56064,-1.0124 25.34404,5.98629 l 3.40852,3.5167 3.79815,-3.7088 3.79816,-3.70881 0,9.70295 0,10.11057 -9.69616,0 -9.69617,0 3.23458,-3.74486 3.23457,-3.33723 -4.44863,-4.10061 c -8.33353,-7.68158 -13.62869,-6.73113 -25.77241,4.626 -3.77157,3.52727 -6.04833,5.65749 -7.69482,6.5567 -10.66096,0 -6.11898,0 -10.66096,0 z m -21.39776,7.14229 c 0,-1.82727 6.92835,-9.24908 29.42691,-31.17231 l 29.52915,-28.7740395 -3.22531,-3.32768 -3.22532,-3.32768 9.69617,0 9.69616,0 0,9.6961595 0,9.69616 -3.41337,-3.30837 c -1.87736,-1.81961 -3.86374,-3.14538 -4.41417,-2.94616 -0.55044,0.19921 -13.85575,12.8497 -29.56737,28.1122 -24.60159,23.89835 -0.43499,0.32062 -29.58488,28.15762 0,0 -0.38921,0.0884 -4.91797,0 -0.43985,-0.34938 0,-1.80516 0,-2.8059 z m 0,-13.61675 0,-5.13801 c 0,0 3.63572,-3.52703 7.33278,-6.97967 7.95397,-7.42812 10.20804,-11.66299 9.03954,-16.98314 -0.70927,-3.22928 -6.89364,-10.88414 -8.79331,-10.88414 -0.59732,0 -2.56996,1.43827 -4.38364,3.19616 l -3.19537,3.19616 0,-9.69616 0,-9.6961595 9.59393,0 9.69617,0 -3.20386,3.30554 -3.20386,3.30554 3.09691,2.9444595 c 8.52281,8.10327 10.67877,18.06078 5.73572,26.49094 -1.43624,2.44943 -6.93266,8.42682 -12.21429,13.28309 l -9.50072,8.82958 z"
+     d="m 165.77322,26.702212 c 2.66235,-2.407772 5.3437,-4.785534 6.08949,-5.142607 3.24787,-1.555037 7.98698,-0.435654 10.906,2.576009 l 1.46675,1.513299 1.63441,-1.595963 1.63442,-1.595969 0,4.175356 0,4.350761 -4.17243,0 -4.17244,0 1.3919,-1.611481 1.39189,-1.43607 -1.91433,-1.764567 c -3.58606,-3.305523 -5.86467,-2.896528 -11.09033,1.990651 -1.62298,1.517849 -2.60271,2.434521 -3.31122,2.821467 -4.58761,0 -2.63311,0 -4.58761,0 z m -9.20784,3.073457 c 0,-0.786308 2.98139,-3.980047 12.66293,-13.41401 l 12.70693,-12.3819915 -1.38791,-1.431961 -1.38791,-1.431961 4.17244,0 4.17243,0 0,4.172433 0,4.172434 -1.46884,-1.423652 c -0.80786,-0.783011 -1.66263,-1.353514 -1.89949,-1.267786 -0.23687,0.08572 -5.96238,5.5294595 -12.72338,12.0971895 -10.58651,10.283893 -0.18718,0.137969 -12.73091,12.116734 0,0 -0.16748,0.03804 -2.11629,0 -0.18928,-0.150344 0,-0.776793 0,-1.207429 z m 0,-5.859535 0,-2.210979 c 0,0 1.56452,-1.517744 3.15543,-3.003478 3.42274,-3.196455 4.3927,-5.018796 3.88988,-7.308153 -0.30522,-1.389618 -2.96646,-4.6836435 -3.78392,-4.6836435 -0.25704,0 -1.10591,0.618914 -1.88636,1.375366 l -1.37503,1.375366 0,-4.172434 0,-4.172433 4.12844,0 4.17244,0 -1.37868,1.422434 -1.37868,1.422434 1.33266,1.267054 c 3.66752,3.486984 4.59527,7.7718815 2.46818,11.3995315 -0.61804,1.054034 -2.98325,3.626214 -5.25603,5.715955 l -4.08833,3.799528 z"
      id="path3421"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ssscccccccccssccssscccccccscsccsscsssscccccccssscs" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:111.28119659px;line-height:125%;font-family:NarkisBlockMF;-inkscape-font-specification:NarkisBlockMF;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-     x="-4.2706318"
-     y="70.442001"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:47.88631439px;line-height:125%;font-family:NarkisBlockMF;-inkscape-font-specification:NarkisBlockMF;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     x="-1.2680528"
+     y="30.882151"
      id="text3423"
      sodipodi:linespacing="125%"><tspan
        sodipodi:role="line"
        id="tspan3425"
-       x="-4.2706318"
-       y="70.442001"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:111.28107452px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:start;letter-spacing:-5px;writing-mode:lr-tb;text-anchor:start">אלתרנתיב</tspan></text>
+       x="-1.2680528"
+       y="30.882151"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:47.8862648px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:start;letter-spacing:-2.15159059px;writing-mode:lr-tb;text-anchor:start">אלתרנתיב</tspan></text>
 </svg>
