@@ -1,7 +1,5 @@
-var directionsDisplay;
-var directionsService = new google.maps.DirectionsService();
-var map;
 
+var directionsDisplay;
 var initializeMap = function () {
     directionsDisplay = new google.maps.DirectionsRenderer();
     var telAviv = new google.maps.LatLng(32.054934, 34.775407);
@@ -9,7 +7,7 @@ var initializeMap = function () {
         zoom:14,
         center: telAviv
     };
-    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     directionsDisplay.setMap(map);
 };
 
