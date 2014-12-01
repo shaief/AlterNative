@@ -309,3 +309,14 @@ h4.result-text {
 h4.question {
     margin-top: 30px;
 }
+
+.footer-no-scroll {
+    position: fixed;
+    bottom: 0;
+    margin: auto;
+}
+
+.footer-scroll {
+    bottom: 0;
+    margin: auto;
+}
