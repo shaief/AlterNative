@@ -145,12 +145,16 @@ label {
     align-content: center;
     vertical-align: middle;
     position: relative;
-    border-color: white;
-    border-width: 10px;
+    /*border-color: white;*/
+    /*border-width: 10px;*/
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
     box-shadow: 3px 3px 0px 0px;
+}
+
+.circle img{
+    width: 35px;
 }
 
 .circle:active, .active {
@@ -164,26 +168,23 @@ label {
     vertical-align: middle;
 }
 
-.ecology {
+body.ecology {
     background: rgba(1, 133, 113, 0.5);
     opacity: 50;
 }
 
-span.ecology{
-    background-image: url("images/ecology.png");
-}
-
-.calories {
+body.calories {
     background: rgba(128, 205, 193, 0.5);
     opacity: 50;
 }
 
-.money {
+body.money {
     background: rgba(223, 194, 125, 0.5);
     opacity: 50;
 }
 
-.time {
+
+body.time  {
     background: rgba(166, 97, 26, 0.5);
     opacity: 50;
 }
