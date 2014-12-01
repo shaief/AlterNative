@@ -3,7 +3,7 @@ ecoSorter = function(ride1, ride2){
 }
 
 calSorter = function (ride1, ride2) {
-	return ride1.calories < ride2.calories ? -1 : 1;;
+	return ride1.calories > ride2.calories ? -1 : 1;;
 }
 
 moneySorter = function (ride1, ride2) {
