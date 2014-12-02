@@ -10,7 +10,7 @@
     }
 
     html { height: 100%; }
-    body { height: 100%; }
+
     body.know-tint{
         height: initial !important;
     }
@@ -22,8 +22,8 @@
         -moz-transition: background 0.25s ease-in;
         -o-transition: background 0.25s ease-in;
         transition: background 0.25s ease-in;
-        background: rgba(255, 255, 255, 0);
         /*padding-top: 70px;*/
+        background: rgba(166, 97, 26, 0.5);
 
     }
     .top-back-button {
@@ -123,6 +123,10 @@ div.container {
     vertical-align: middle;
 }
 
+.top-items {
+    margin-top: 75px;
+}
+
 .circle-buttons {
     padding: 2.5px;
     margin: 2.5px;
@@ -171,6 +175,8 @@ label {
 }
 
 .circle img{
+    margin-left: -25px;
+    margin-right: -25px;
     width: 35px;
 }
 
@@ -283,8 +289,7 @@ input.form-control{
 
 .result {
     margin: 10px;
-    padding: 5px;
-    border-width: 5px;
+    /*padding: 5px;*/
     background: rgba(0, 0, 0, 0.75);
 }
 
