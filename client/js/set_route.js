@@ -4,6 +4,12 @@ Template.setRoute.rendered = function () {
     toggleCircle("ecology");
     setAutoComplete();
     setCurrentLoaction();
+    if(Session.get('from')){
+        $('.from-location').val(Session.get('from').formatted_address);
+    }
+    if(Session.get('to')){
+        $('.to-location').val(Session.get('to').formatted_address);
+    }
 };
 
 Template.setRoute.events({
