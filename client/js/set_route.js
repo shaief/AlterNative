@@ -19,8 +19,5 @@ Template.setRoute.events({
     'focus .to-location': function () {
         setAutoComplete();
     },
-    'click .know': function () {
-
-    },
     'click .circle': circleClickHandler
 });

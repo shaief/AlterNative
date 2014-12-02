@@ -26,6 +26,20 @@
         /*padding-top: 70px;*/
 
     }
+    .top-back-button {
+        position: fixed;
+        left: 10px;
+        top: 10px;
+        display: none;
+        font-size: 30px;
+        cursor: pointer;
+    }
+    body.map .top-back-button,
+    body.know-tint .top-back-button{
+        display: inline-block;
+    }
+
+
 /*}*/
 
 /*@media only screen and (max-device-width: 480px) {*/

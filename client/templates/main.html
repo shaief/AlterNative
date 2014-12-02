@@ -4,15 +4,18 @@
     <script src="https://maps.googleapis.com/maps/api/js?libraries=geometry,places,directions"></script>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-
-        <div class="navbar-header" align="center">
-            <a href="/" class="navbar-brand">
-            <img class="navbar-brand logo" src="images/AlterNative_logo.svg">
-            </a>
-
-        </div>
-    </div>
-</nav>
+    {{> main }}
 </body>
+<template name="main">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div id="" class="top-back-button glyphicon glyphicon-chevron-left"></div>
+            <div class="navbar-header" align="center">
+                <a href="/" class="navbar-brand">
+                    <img class="navbar-brand logo" src="images/AlterNative_logo.svg">
+                </a>
+
+            </div>
+        </div>
+    </nav>
+</template>
