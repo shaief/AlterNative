@@ -11,6 +11,9 @@
 
     html { height: 100%; }
     body { height: 100%; }
+    body.know-tint{
+        height: initial !important;
+    }
 
     body {
         height: 100%;
