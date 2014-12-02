@@ -28,10 +28,10 @@
     }
     .top-back-button {
         position: fixed;
-        left: -2px;
+        left: -8px;
         top: 18px;
         display: none;
-        font-size: 27px;
+        font-size: 25px;
         cursor: pointer;
         border: none;
         background: none;
