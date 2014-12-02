@@ -126,7 +126,7 @@ div.container {
 }
 
 .top-items {
-    margin-top: 75px;
+    margin-top: 55px;
 }
 
 .circle-buttons {
@@ -291,7 +291,7 @@ input.form-control{
 
 .result {
     margin: 10px;
-    /*padding: 5px;*/
+    padding-bottom: 10px;
     background: rgba(0, 0, 0, 0.75);
 }
 
