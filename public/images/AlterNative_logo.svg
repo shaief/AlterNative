@@ -12,7 +12,7 @@
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    id="svg3407"
    version="1.1"
-   inkscape:version="0.48.5 r10040"
+   inkscape:version="0.91pre1 r13432"
    width="188.50429"
    height="32.000004"
    viewBox="0 0 188.50429 36.000004"
@@ -28,7 +28,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -43,14 +43,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1276"
+     inkscape:window-width="636"
      inkscape:window-height="761"
      id="namedview3409"
      showgrid="false"
      inkscape:zoom="1.0159803"
-     inkscape:cx="198.03539"
+     inkscape:cx="74.509373"
      inkscape:cy="-3.295031"
-     inkscape:window-x="0"
+     inkscape:window-x="640"
      inkscape:window-y="37"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg3407"
@@ -74,17 +74,41 @@
      id="path3421"
      inkscape:connector-curvature="0"
      sodipodi:nodetypes="ssscccccccccssccssscccccccscsccsscsssscccccccssscs" />
-  <text
-     xml:space="preserve"
-     style="font-size:40.23017883px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:NarkisBlockMF;-inkscape-font-specification:NarkisBlockMF"
-     x="2.9886701"
-     y="30.313078"
-     id="text3423"
-     sodipodi:linespacing="125%"
-     transform="scale(1.0267203,0.97397507)"><tspan
-       sodipodi:role="line"
-       id="tspan3425"
-       x="-10.9886701"
-       y="30.313078"
-       style="font-size:40.23013687px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:right;line-height:125%;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start;font-family:Almoni DL AAA;-inkscape-font-specification:'Almoni DL AAA, Normal'">ביתנרתלא</tspan></text>
+  <g
+     transform="scale(1.0267203,0.97397507)"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23017883px;line-height:125%;font-family:NarkisBlockMF;-inkscape-font-specification:NarkisBlockMF;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none"
+     id="text3423">
+    <path
+       d="m 133.96969,30.313078 -5.75558,-8.250321 c 3.33942,-0.392873 5.34307,-2.534027 5.34307,-6.600257 l 0,-5.9913045 -3.33942,0 0,6.8752675 c 0,2.298304 -1.31612,3.555496 -3.3787,3.869793 l -7.03242,-10.7450605 -3.59478,0 4.55732,6.8359805 c -3.71265,0.844676 -4.51803,3.751931 -4.51803,7.05206 l 0,6.953842 3.39834,0 -0.0589,-8.171747 c 0,-2.003649 0.84468,-3.41799 2.45545,-3.850149 l 8.0146,12.021896 3.90908,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5093" />
+    <path
+       d="m 102.93315,9.4711955 0,-4.2626659 -3.142979,0 0,7.1699214 10.666489,0 -6.44311,17.934627 3.53585,0 7.64137,-20.8418825 -12.25762,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5095" />
+    <path
+       d="m 79.498683,9.4711955 0,2.9072555 2.259017,0 0,15.086302 -3.791219,0 0,2.848325 7.130635,0 0,-18.150706 4.950192,0 c 3.084049,0 3.732288,2.573314 3.732288,5.637719 l 0,12.512987 3.535852,0 0,-11.82546 c 0,-5.303778 -1.35541,-9.0164225 -7.032416,-9.0164225 l -10.784349,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5097" />
+    <path
+       d="m 62.900203,9.4711955 0,2.9072555 6.285959,0 c 2.9269,0 3.535852,2.9269 3.535852,6.030592 l 0,11.904035 3.653714,0 0,-11.668311 c 0,-5.303778 -1.276836,-9.1735715 -6.993129,-9.1735715 l -6.482396,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5099" />
+    <path
+       d="m 51.703716,27.464753 0,2.848325 3.162623,0 c 3.398346,0 5.323421,-2.298304 5.323421,-5.991305 l 0,-14.8505775 -6.40382,0 0,2.9072555 2.828681,0 0,11.707599 c 0,2.691176 -0.608952,3.378703 -2.592958,3.378703 l -2.317947,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5101" />
+    <path
+       d="m 31.569381,9.4711955 0,2.9072555 2.259017,0 0,15.086302 -3.791219,0 0,2.848325 7.130634,0 0,-18.150706 4.950193,0 c 3.084049,0 3.732288,2.573314 3.732288,5.637719 l 0,12.512987 3.535852,0 0,-11.82546 c 0,-5.303778 -1.35541,-9.0164225 -7.032417,-9.0164225 l -10.784348,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5103" />
+    <path
+       d="m 24.164114,9.4515519 0,10.8039921 3.693001,0 0,-10.8039921 -3.693001,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5105" />
+    <path
+       d="m 19.017865,27.464753 0,-17.9935575 -14.1237643,0 0,2.9072555 10.5093373,0 0,15.086302 -10.5093373,0 0,2.848325 16.8542273,0 0,-2.848325 -2.730463,0 z"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40.23013687px;line-height:125%;font-family:'Almoni DL AAA';-inkscape-font-specification:'Almoni DL AAA, Normal';text-align:right;letter-spacing:-1.80759108px;writing-mode:rl-tb;text-anchor:start"
+       id="path5107" />
+  </g>
 </svg>
