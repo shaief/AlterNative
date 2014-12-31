@@ -11,7 +11,8 @@ toggleCircle = function(circleClass){
 };
 
 circleClickHandler = function (jQueryEvent, BlazeTemplateInstance) {
-    var circleClass = $(jQueryEvent.target).children('img').attr('class');
-    console.log('the ' + circleClass + '  circle button was clicked');
+    var circleClass = $(jQueryEvent.target).attr('class');
+    var imgClass = $(jQueryEvent.target).attr('class');
+    console.log('the ' + circleClass + ' ' + imgClass + '  circle button was clicked');
     toggleCircle(circleClass);
 };
