@@ -348,3 +348,21 @@ h4.question {
     padding: 5px;
     background: rgba(255, 255, 255, 0.5);
 }
+
+.visualization {
+       background: rgba(255, 255, 255, 0.5);
+
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 300px;
+  /*height: 90px;*/
+  padding: 5px;
+  font: 12px Alef;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 0px 8px 8px 8px;
+  pointer-events: none;
+}
