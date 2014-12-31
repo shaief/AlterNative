@@ -13,4 +13,5 @@ fuatsengul:leaflet
 iron:router
 autopublish
 jquery
+d3js:d3
 
