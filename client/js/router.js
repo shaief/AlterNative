@@ -22,3 +22,7 @@ Router.route('/', function () {
     $('body').removeClass('map');
 });
 
+Router.route('/view_db', function () {
+    this.render('dbVisualization');
+});
+
