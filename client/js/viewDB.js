@@ -8,29 +8,44 @@ Template.dbVisualization.rendered = function(){
             });
 	var w = 400;
 	var h = 300;
+	var padding = 30;
+	var circleRadius = 7;
+	var circleStrokeWidth = 3;
 
 	var div = d3.select("body").append("div")   
 	    .attr("class", "tooltip")               
 	    .style("opacity", 0);
 
 	var xScale = d3.scale.linear()
-				.domain([0, d3.max(dataset, function(d) { return d['duration']; })])
-				.range([0, w-10]);
+				.domain([0, d3.max(dataset, function(d) { return d['duration']*1.1; })])
+				.range([circleRadius*2+padding, w-circleRadius*2]);
 
 	var yScale = d3.scale.linear()
-				.domain([0, d3.max(dataset, function(d) { return d['distance']; })])
-				.range([h-20, 10]);
+				.domain([0, d3.max(dataset, function(d) { return d['distance']*1.1; })])
+				.range([h-circleRadius*3-padding, circleRadius*2]);
 
-	var circleRadius = 7;
-	var circleStrokeWidth = 3;
+	//Define X axis
+	var xAxis = d3.svg.axis();
+	    xAxis.scale(xScale);
+		xAxis.orient("bottom");
+		var xAxis = d3.svg.axis()
+	                  .scale(xScale)
+	                  .orient("bottom")
+                      .ticks(10);  //Set rough # of ticks
+    //Define Y axis
+	var yAxis = d3.svg.axis()
+                  .scale(yScale)
+                  .orient("left")
+                  .ticks(5);
 
+	    
 	var partOfDay = function(d) {
 		if (d.getHours() > 05 && d.getHours() <= 10) {return 'morning'}
 		if (d.getHours() > 10 && d.getHours() <= 14) {return 'noon'}
 		if (d.getHours() > 14 && d.getHours() <= 18) {return 'afternoon'}
 		if (d.getHours() > 18 && d.getHours() <= 22) {return 'evening'}
 		if (d.getHours() > 22 && d.getHours() <= 24) {return 'night'}
-		if (d.getHours() > 00 && d.getHours() <= 05) {return 'night'}
+		if (d.getHours() >= 00 && d.getHours() <= 05) {return 'night'}
 	}
 	// Colors dictionary by tranportation method:
 	colors = {'bus': '#0000FF',
@@ -86,13 +101,15 @@ Template.dbVisualization.rendered = function(){
             div.transition()        
                 .duration(200)      
                 .style("opacity", .9);      
-            div .html("<strong>From:</strong> <span style='color:red'>" + d['origin'] + 
-				    "<br><span style='color:black'><strong>To:</strong></span> <span style='color:red'>" + 
-				    d['destination'] + 
+            div .html("<span style='color:black'><strong>Method of transportation:</strong></span> <span style='color:red'>" + d['name'] + 
+            		"<br></span>" +
+            		"<span style='color:black'><strong>From:</strong></span> <span style='color:red'>" + d['origin'] + 
+				    "</span><br>" +
+				    "<span style='color:black'><strong>To:</strong></span> <span style='color:red'>" + d['destination'] + 
 				    "</span><br>" +
 				    "<span style='color:black'><strong>Distance:</strong></span> <span style='color:red'>" + 
-				    d['distance'] + 
-				    "<span style='color:black'>[km]</span><br><span style='color:black'><strong>Duration:</strong></span> <span style='color:red'>" + 
+				    d['distance'] + "<span style='color:black'>[km]</span>" +
+				    "<br><span style='color:black'><strong>Duration:</strong></span> <span style='color:red'>" + 
 				    d['duration'] + "</span><span style='color:black'>[minutes]</span>" +
 				    "<br><span style='color:black'><strong>Date and time:</strong></span> <span style='color:red'>" + 
 				    d['date'] + "</span>")  
@@ -104,6 +121,18 @@ Template.dbVisualization.rendered = function(){
                 .duration(500)      
                 .style("opacity", 0);   
     });
+
+	//Create X axis
+    svg.append("g")
+    	.attr("class", "axis")  //Assign "axis" class
+    	.attr("transform", "translate(0," + (h - padding) + ")")
+    	.call(xAxis);
+
+	//Create Y axis
+	svg.append("g")
+	    .attr("class", "axis")
+	    .attr("transform", "translate(" + padding + ",0)")
+	    .call(yAxis);
 
 	svg.append("text")
 	    .attr("class", "x label")
