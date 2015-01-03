@@ -1,0 +1,32 @@
+<template name="dcVisualization">
+	<div class="container">
+        
+        <br>
+	  	<br>
+  		<br>
+
+    	<h1>dc.js + crossfilter :)</h1>
+		<div class="visualization">
+			<div id="chart-line-duration"></div>
+			<div class="pie" id="chart-ring-month"></div>
+			<div class="pie" id="chart-ring-day"></div>
+			<div class="pie" id="chart-ring-hour"></div>
+			<!-- <div class="pie" id="chart-ring-name"></div> -->
+			<br>
+			<div id="bar-name-duration"></div>
+			<div id="bar-name-distance"></div>
+			<div style='clear:both;'>
+					<table id="dc-data-table" border="1">
+						<thead>
+						<tr class="header">
+							<th>Day</th>
+							<th>Method</th>
+							<th>Distance [km]</th>
+							<th>Duration [minutes]</th>
+						</tr>
+						</thead>
+					</table>
+			</div>
+		</div>
+	</div>
+</template>

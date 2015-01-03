@@ -26,3 +26,6 @@ Router.route('/view_db', function () {
     this.render('dbVisualization');
 });
 
+Router.route('/view_dc', function () {
+    this.render('dcVisualization');
+});
