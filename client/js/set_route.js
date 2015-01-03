@@ -3,7 +3,9 @@ Session.setDefault('sort-by', KnowGo.sortby.ECO);
 Template.setRoute.rendered = function () {
     toggleCircle("ecology");
     setAutoComplete();
-    setCurrentLoaction();
+    Meteor.startup(function (){
+        setCurrentLoaction();
+    });
     if(Session.get('from')){
         $('.from-location').val(Session.get('from').formatted_address);
     }

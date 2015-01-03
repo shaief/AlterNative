@@ -1,11 +1,11 @@
-Session.setDefault('distances');
+Session.setDefault('distances', {});
 
 setAutoComplete = function () {
-    setLocation("from", 'from-location');
-    setLocation("to", 'to-location');
-}
+    _setAutoComp("from", 'from-location');
+    _setAutoComp("to", 'to-location');
+};
 
-setLocation = function (key, className) {
+_setAutoComp = function (key, className) {
     var input = document.getElementsByClassName(className)[0];
     var bounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(32.156958, 34.747717),
@@ -34,8 +34,10 @@ setLocation = function (key, className) {
         zoom:12,
         center: telAviv
     };
-    var map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
+    var map = new google.maps.Map(
+        document.getElementById('map-canvas'),
+        mapOptions
+    );
     autoComplete.bindTo('bounds', map);
-}
+};
 
