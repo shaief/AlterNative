@@ -57,9 +57,11 @@ Template.dcVisualization.rendered = function(){
 	var hour_total = hourDim.group().reduceSum(function(d) {return d.duration;});
 
 	var nameDim = ndx.dimension(function(d) {return d.name});
+	var name_count = nameDim.group().reduceCount();
 	var name_duration_total = nameDim.group().reduceSum(function(d) {return d.duration;});
 	var name_distance_total = nameDim.group().reduceSum(function(d) {return d.distance;});
-	
+	// debugger;
+
 	var hitslineChart  = dc.barChart("#chart-line-duration"); 
 	hitslineChart
 		.width(500).height(200)
@@ -97,25 +99,35 @@ Template.dcVisualization.rendered = function(){
 	//     .group(name_duration_total)
 	//     .innerRadius(30); 
 
-	var nameDurationBarChart = dc.barChart("#bar-name-duration");
-	nameDurationBarChart
+var nameCountBarChart = dc.barChart("#bar-name-count");
+	nameCountBarChart
 		.width(500).height(200)
 		.dimension(nameDim)
-		.group(name_duration_total)
+		.group(name_count)
 		// .brushOn(false)
-		.yAxisLabel("Duration [minutes]")  
+		.yAxisLabel("DB count")  
 		.x(d3.scale.ordinal().domain(["driving", "taxi", "bus", "bike", "walking"])) // Need empty val to offset first value
 		.xUnits(dc.units.ordinal); // Tell Dc.js that we're using an ordinal x axis
 
-	var nameDistanceBarChart = dc.barChart("#bar-name-distance");
-	nameDistanceBarChart
-		.width(500).height(200)
-		.dimension(nameDim)
-		.group(name_distance_total)
-		// .brushOn(false)
-		.yAxisLabel("Distance [km]")  
-		.x(d3.scale.ordinal().domain(["driving", "taxi", "bus", "bike", "walking"])) // Need empty val to offset first value
-		.xUnits(dc.units.ordinal); // Tell Dc.js that we're using an ordinal x axis
+	// var nameDurationBarChart = dc.barChart("#bar-name-duration");
+	// nameDurationBarChart
+	// 	.width(500).height(200)
+	// 	.dimension(nameDim)
+	// 	.group(name_duration_total)
+	// 	// .brushOn(false)
+	// 	.yAxisLabel("Duration [minutes]")  
+	// 	.x(d3.scale.ordinal().domain(["driving", "taxi", "bus", "bike", "walking"])) // Need empty val to offset first value
+	// 	.xUnits(dc.units.ordinal); // Tell Dc.js that we're using an ordinal x axis
+
+	// var nameDistanceBarChart = dc.barChart("#bar-name-distance");
+	// nameDistanceBarChart
+	// 	.width(500).height(200)
+	// 	.dimension(nameDim)
+	// 	.group(name_distance_total)
+	// 	// .brushOn(false)
+	// 	.yAxisLabel("Distance [km]")  
+	// 	.x(d3.scale.ordinal().domain(["driving", "taxi", "bus", "bike", "walking"])) // Need empty val to offset first value
+	// 	.xUnits(dc.units.ordinal); // Tell Dc.js that we're using an ordinal x axis
 
 	var datatable   = dc.dataTable("#dc-data-table");
 	datatable
