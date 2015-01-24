@@ -1,4 +1,4 @@
-setCurrentLoaction = function (argument) {
+setCurrentLoaction = function () {
     window.navigator.geolocation.getCurrentPosition(
         function (position) {
             Session.set('current_location', {
@@ -8,10 +8,10 @@ setCurrentLoaction = function (argument) {
             _setCurrentLoaction()
         },
         function (error) {
-            // console.log(error);
+            console.log('error setting current location', error);
         }
     );
-}        
+};
 _setCurrentLoaction = function  () {
     var geocoder = new google.maps.Geocoder();
     var lat = Session.get('current_location').lat; 
